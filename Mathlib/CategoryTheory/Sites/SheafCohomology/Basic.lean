@@ -6,6 +6,8 @@ Authors: Joël Riou
 import Mathlib.Algebra.Category.Grp.Abelian
 import Mathlib.Algebra.Category.Grp.Adjunctions
 import Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic
+import Mathlib.AlgebraicTopology.AlternatingFaceMapComplex
+import Mathlib.AlgebraicTopology.CechNerve
 import Mathlib.CategoryTheory.Sites.Abelian
 import Mathlib.CategoryTheory.Sites.ConstantSheaf
 
@@ -80,6 +82,21 @@ noncomputable abbrev cohomologyPresheaf (F : Sheaf J AddCommGrp.{v}) (n : ℕ) :
   (cohomologyPresheafFunctor J n).obj F
 
 end
+
+
+open Limits
+
+noncomputable
+def _root_.CategoryTheory.Presieve.asMorphism (X : C) (S : Presieve X) [HasColimit S.diagram]: colimit S.diagram ⟶ X :=
+  colimit.desc S.diagram ⟨_, fun f => f.obj.hom, by aesop_cat⟩
+
+def Cech.complex (F : Sheaf J AddCommGrp.{v}) (X : C) (𝒰 : J X) : CochainComplex AddCommGrp ℕ :=
+  (AlgebraicTopology.alternatingCofaceMapComplex _).obj <|
+    Functor.rightOp (Arrow.cechNerve <| 𝒰.val.arrows.asMorphism) ⋙
+      _
+
+#check whiskeringRight
+#check Arrow.cechNerve
 
 end Sheaf
 
