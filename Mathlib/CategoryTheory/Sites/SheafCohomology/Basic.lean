@@ -86,17 +86,25 @@ end
 
 open Limits
 
-noncomputable
-def _root_.CategoryTheory.Presieve.asMorphism (X : C) (S : Presieve X) [HasColimit S.diagram]: colimit S.diagram ⟶ X :=
-  colimit.desc S.diagram ⟨_, fun f => f.obj.hom, by aesop_cat⟩
+def toCocompletion (F : Cᵒᵖ ⥤ AddCommGrp.{u}) : (Cᵒᵖ ⥤ Type v)ᵒᵖ ⥤ AddCommGrp.{v} where
+  obj X := limit sorry /- I tried to come up with something like, take limit of a diagram where
+    every map `V ⟶ U` corresponds to a new map `F(U) ⟶ F(V)`, and something like, take
+    `X(U)` copies of `U`, but couldn't really make it work. -/
+  map f := sorry
+
+noncomputable def sieveToCocompletion (X : C) (𝒰 : J X) : Cᵒᵖ ⥤ Type v where
+  obj y := 𝒰.val.arrows (Y := y.unop)
+  map f g := ⟨f.unop ≫ g.1, 𝒰.val.downward_closed _ f.unop⟩
+
+noncomputable def sieveToCocompletionArrow (X : C) (𝒰 : J X) : Arrow (Cᵒᵖ ⥤ Type v) where
+  left := sieveToCocompletion X 𝒰
+  right := yoneda.obj X
+  hom := { app y f := f.1 }
 
 def Cech.complex (F : Sheaf J AddCommGrp.{v}) (X : C) (𝒰 : J X) : CochainComplex AddCommGrp ℕ :=
   (AlgebraicTopology.alternatingCofaceMapComplex _).obj <|
-    Functor.rightOp (Arrow.cechNerve <| 𝒰.val.arrows.asMorphism) ⋙
-      _
-
-#check whiskeringRight
-#check Arrow.cechNerve
+    Functor.rightOp (Arrow.cechNerve <| sieveToCocompletionArrow X 𝒰) ⋙
+      (toCocompletion F.val) -- I should use one universe?
 
 end Sheaf
 
