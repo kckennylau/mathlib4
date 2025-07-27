@@ -66,7 +66,7 @@ instance (X : C) (n : ℕ) : (alternatingConst.obj X).HasHomology n := by
     · exact ⟨⟨alternatingConstHomologyDataEvenNEZero X _ h (by simp)⟩⟩
   · exact ⟨⟨alternatingConstHomologyDataOdd X _ h⟩⟩
 
-/-- The `n`-th homology of the alternating constant complex is `X` for `n ≠ 0`. -/
+/-- The `n`-th homology of the alternating constant complex is zero for `n ≠ 0`. -/
 lemma alternatingConst_exactAt (X : C) (n : ℕ) (hn : n ≠ 0) :
     (alternatingConst.obj X).ExactAt n := by
   rcases n.even_or_odd with h | h

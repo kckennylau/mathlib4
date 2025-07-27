@@ -58,7 +58,7 @@ noncomputable def inl : Cochain F (mappingCone φ) (-1) :=
 /-- The right inclusion in the mapping cone. -/
 noncomputable def inr : G ⟶ mappingCone φ := homotopyCofiber.inr φ
 
-/-- The first projection from the mapping cone, as a cocyle of degree `1`. -/
+/-- The first projection from the mapping cone, as a cocycle of degree `1`. -/
 noncomputable def fst : Cocycle (mappingCone φ) F 1 :=
   Cocycle.mk (Cochain.mk (fun p q hpq => homotopyCofiber.fstX φ p q hpq)) 2 (by omega) (by
     ext p _ rfl
@@ -114,7 +114,7 @@ lemma inr_snd :
     (Cochain.ofHom (inr φ)).comp (snd φ) (zero_add 0) = Cochain.ofHom (𝟙 G) := by aesop_cat
 
 /-! In order to obtain identities of cochains involving `inl`, `inr`, `fst` and `snd`,
-it is often convenient to use an `ext` lemma, and use simp lemmas like `inl_v_f_fst_v`,
+it is often convenient to use an `ext` lemma, and use simp lemmas like `inl_v_fst_v`,
 but it is sometimes possible to get identities of cochains by using rewrites of
 identities of cochains like `inl_fst`. Then, similarly as in category theory,
 if we associate the compositions of cochains to the right as much as possible,
@@ -230,7 +230,7 @@ lemma id_X (p q : ℤ) (hpq : p + 1 = q) :
     (fst φ).1.v p q hpq ≫ (inl φ).v q p (by omega) +
       (snd φ).v p p (add_zero p) ≫ (inr φ).f p = 𝟙 ((mappingCone φ).X p) := by
   simpa only [Cochain.add_v, Cochain.comp_zero_cochain_v, Cochain.ofHom_v, id_f,
-    Cochain.comp_v _ _ (add_neg_cancel 1) p q p hpq (by omega)]
+    Cochain.comp_v _ _ (neg_add_cancel 1) p q p hpq (by omega)]
     using Cochain.congr_v (id φ) p p (add_zero p)
 
 @[reassoc]
@@ -291,7 +291,7 @@ section
 variable {K : CochainComplex C ℤ} {n m : ℤ}
 
 /-- Given `φ : F ⟶ G`, this is the cochain in `Cochain (mappingCone φ) K n` that is
-constructed from two cochains `α : Cochain F K m` (with `m + 1 = n`) and `β : Cochain F K n`. -/
+constructed from two cochains `α : Cochain F K m` (with `m + 1 = n`) and `β : Cochain G K n`. -/
 noncomputable def descCochain (α : Cochain F K m) (β : Cochain G K n) (h : m + 1 = n) :
     Cochain (mappingCone φ) K n :=
   (fst φ).1.comp α (by rw [← h, add_comm]) + (snd φ).comp β (zero_add n)

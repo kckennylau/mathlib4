@@ -24,7 +24,7 @@ as the data of a morphism `F.X p ⟶ G.X q` for all triplets
 `⟨p, q, hpq⟩` where `p` and `q` are integers and `hpq : p + n = q`.
 If `α : Cochain F G n`, we shall define `α.v p q hpq : F.X p ⟶ G.X q`.
 
-We follow the signs conventions appearing in the introduction of
+We follow the sign conventions appearing in the introduction of
 [Brian Conrad's book *Grothendieck duality and base change*][conrad2000].
 
 ## References
@@ -59,7 +59,7 @@ structure Triplet (n : ℤ) where
 
 variable (F G)
 
-/-- A cochain of degree `n : ℤ` between to cochain complexes `F` and `G` consists
+/-- A cochain of degree `n : ℤ` between two cochain complexes `F` and `G` consists
 of a family of morphisms `F.X p ⟶ G.X q` whenever `p + n = q`, i.e. for all
 triplets in `HomComplex.Triplet n`. -/
 def Cochain := ∀ (T : Triplet n), F.X T.p ⟶ G.X T.q
@@ -192,7 +192,7 @@ lemma ofHom_sub (φ₁ φ₂ : F ⟶ G) :
 lemma ofHom_neg (φ : F ⟶ G) :
     Cochain.ofHom (-φ) = -Cochain.ofHom φ := by aesop_cat
 
-/-- The cochain of degree `-1` given by an homotopy between two morphism of complexes. -/
+/-- The cochain of degree `-1` given by a homotopy between two morphisms of complexes. -/
 def ofHomotopy {φ₁ φ₂ : F ⟶ G} (ho : Homotopy φ₁ φ₂) : Cochain F G (-1) :=
   Cochain.mk (fun p q _ => ho.hom p q)
 
@@ -736,7 +736,7 @@ lemma δ_ofHom_comp {n : ℤ} (f : F ⟶ G) (z : Cochain G K n) (m : ℤ) :
 
 namespace Cochain
 
-/-- Given two morphisms of complexes `φ₁ φ₂ : F ⟶ G`, the datum of an homotopy between `φ₁` and
+/-- Given two morphisms of complexes `φ₁ φ₂ : F ⟶ G`, the datum of a homotopy between `φ₁` and
 `φ₂` is equivalent to the datum of a `1`-cochain `z` such that `δ (-1) 0 z` is the difference
 of the zero cochains associated to `φ₂` and `φ₁`. -/
 @[simps]

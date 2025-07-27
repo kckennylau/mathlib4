@@ -17,3 +17,4 @@ def Submonoid.isPrimal (M₀ : Type*) [CancelCommMonoidWithZero M₀] : Submonoi
   carrier := {a | IsPrimal a}
   mul_mem' := .mul
   one_mem' := isUnit_one.isPrimal
+

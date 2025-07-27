@@ -19,7 +19,7 @@ cochain complexes `φ : K ⟶ L`.
 This result first appeared in the Liquid Tensor Experiment. In the LTE, the
 formalization followed the Stacks Project: in particular, the distinguished
 triangles were defined using degreewise-split short exact sequences of cochain
-complexes. Here, we follow the original definitions in [Verdiers's thesis, I.3][verdier1996]
+complexes. Here, we follow the original definitions in [Verdier's thesis, I.3][verdier1996]
 (with the better sign conventions from the introduction of
 [Brian Conrad's book *Grothendieck duality and base change*][conrad2000]).
 
@@ -107,7 +107,7 @@ lemma triangleMapOfHomotopy_comm₃ :
     mapOfHomotopy H ≫ (triangle φ₂).mor₃ = (triangle φ₁).mor₃ ≫ a⟦1⟧' := by
   ext p
   dsimp [mapOfHomotopy, triangle]
-  -- the following list of lemmas as been obtained by doing
+  -- the following list of lemmas has been obtained by doing
   -- simp? [ext_from_iff _ _ _ rfl, Cochain.rightShift_v _ 1 0 _ p p _ (p + 1) rfl]
   simp only [Int.reduceNeg, Cochain.rightShift_neg, Cochain.neg_v, shiftFunctor_obj_X',
     Cochain.rightShift_v _ 1 0 _ p p _ (p + 1) rfl, shiftFunctor_obj_X, shiftFunctorObjXIso,
@@ -360,9 +360,9 @@ noncomputable def shiftTriangleIso (n : ℤ) :
   · ext p
     dsimp
     simp only [Units.smul_def, shiftIso, Int.reduceNeg, Linear.smul_comp, id_comp,
-      ext_to_iff _ _ (p + 1) rfl, shiftFunctor_obj_X', assoc, lift_f_fst_v, Cocycle.coe_smul,
+      ext_to_iff _ _ (p + 1) rfl, shiftFunctor_obj_X', assoc, lift_fst_v, Cocycle.coe_smul,
       Cocycle.shift_coe, Cochain.smul_v, Cochain.shift_v', Linear.comp_smul, inr_f_fst_v,
-      smul_zero, lift_f_snd_v, inr_f_snd_v, and_true]
+      smul_zero, lift_snd_v, inr_f_snd_v, and_true]
   · ext p
     dsimp
     simp only [triangle, Triangle.mk_mor₃, Cocycle.homOf_f, Cocycle.rightShift_coe,
@@ -372,7 +372,7 @@ noncomputable def shiftTriangleIso (n : ℤ) :
       shiftFunctor_obj_X, shiftFunctorObjXIso, shiftFunctorComm_hom_app_f, Preadditive.neg_comp,
       assoc, Iso.inv_hom_id, comp_id, smul_neg, Units.smul_def, shiftIso, Int.reduceNeg,
       (fst (φ⟦n⟧')).1.rightShift_v 1 0 (zero_add 1) p p (add_zero p) (p + 1) rfl,
-      HomologicalComplex.XIsoOfEq_rfl, Iso.refl_inv, Preadditive.comp_neg, lift_f_fst_v,
+      HomologicalComplex.XIsoOfEq_rfl, Iso.refl_inv, Preadditive.comp_neg, lift_fst_v,
       Cocycle.coe_smul, Cocycle.shift_coe, Cochain.smul_v, Cochain.shift_v']
 
 /-- The canonical isomorphism `(triangleh φ)⟦n⟧ ≅ triangleh (φ⟦n⟧')`. -/

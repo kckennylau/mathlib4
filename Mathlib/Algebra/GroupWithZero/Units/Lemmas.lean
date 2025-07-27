@@ -99,7 +99,7 @@ section GroupWithZero
 variable [GroupWithZero G₀] [GroupWithZero G₀'] [FunLike F G₀ G₀']
   [MonoidWithZeroHomClass F G₀ G₀'] (f : F) (a b : G₀)
 
-/-- A monoid homomorphism between groups with zeros sending `0` to `0` sends `a⁻¹` to `(f a)⁻¹`. -/
+/-- A monoid homomorphism between groups with zero sending `0` to `0` sends `a⁻¹` to `(f a)⁻¹`. -/
 @[simp]
 theorem map_inv₀ : f a⁻¹ = (f a)⁻¹ := by
   by_cases h : a = 0

@@ -69,7 +69,7 @@ variable [Zero α] [Zero β] [SMulWithZero α β] {s : Set α} {t : Set β}
 
 /-!
 Note that we have neither `SMulWithZero α (Set β)` nor `SMulWithZero (Set α) (Set β)`
-because `0 * ∅ ≠ 0`.
+because `0 • ∅ ≠ 0`.
 -/
 
 lemma zero_smul_subset (t : Set β) : (0 : Set α) • t ⊆ 0 := by simp [subset_def, mem_smul]

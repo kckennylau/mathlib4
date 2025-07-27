@@ -41,7 +41,7 @@ local cohomology, local cohomology modules
 * Prove that this definition is equivalent to:
     * the right-derived functor definition
     * the characterization as the limit of Koszul homology
-    * the characterization as the cohomology of a Cech-like complex
+    * the characterization as the cohomology of a Čech-like complex
 * Establish long exact sequence(s) in local cohomology
 -/
 

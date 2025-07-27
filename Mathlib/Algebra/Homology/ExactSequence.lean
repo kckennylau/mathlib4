@@ -11,16 +11,16 @@ import Mathlib.CategoryTheory.ComposableArrows
 
 A sequence of `n` composable arrows `S : ComposableArrows C` (i.e. a functor
 `S : Fin (n + 1) ⥤ C`) is said to be exact (`S.Exact`) if the composition
-of two consecutive arrows are zero (`S.IsComplex`) and the diagram is
+of two consecutive arrows is zero (`S.IsComplex`) and the diagram is
 exact at each `i` for `1 ≤ i < n`.
 
 Together with the inductive construction of composable arrows
 `ComposableArrows.precomp`, this is useful in order to state that certain
-finite sequences of morphisms are exact (e.g the snake lemma), even though
+finite sequences of morphisms are exact (e.g. the snake lemma), even though
 in the applications it would usually be more convenient to use individual
 lemmas expressing the exactness at a particular object.
 
-This implementation is a refactor of `exact_seq` with appeared in the
+This implementation is a refactor of `exact_seq` which appeared in the
 Liquid Tensor Experiment as a property of lists in `Arrow C`.
 
 -/

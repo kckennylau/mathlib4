@@ -110,7 +110,7 @@ then `HasExt.{w} C` holds. We do not make this an instance though:
 for a given category `C`, there may be different reasonable choices for
 the universe `w`, and if we have two `HasExt.{w₁} C` and `HasExt.{w₂} C`
 instances, we would have to specify the universe explicitly almost
-everywhere, which would be an inconvenience. Then, we must be
+everywhere, which would be an inconvenience. Thus, we must be
 very selective regarding `HasExt` instances. -/
 lemma hasExt_of_enoughProjectives [LocallySmall.{w} C] [EnoughProjectives C] :
   HasExt.{w} C := by

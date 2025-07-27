@@ -11,7 +11,7 @@ import Mathlib.CategoryTheory.GradedObject.Trifunctor
 
 In this file, we shall introduce various typeclasses which will allow
 the construction of the total complex of a bicomplex and of the
-the monoidal category structure on categories of homological complexes (TODO).
+monoidal category structure on categories of homological complexes (TODO).
 
 The most important definition is that of `TotalComplexShape c₁ c₂ c₁₂` given
 three complex shapes `c₁`, `c₂`, `c₁₂`: it allows the definition of a total
@@ -111,7 +111,7 @@ section
 variable {I : Type*} [AddMonoid I] (c : ComplexShape I)
 
 /-- If `I` is an additive monoid and `c : ComplexShape I`, `c.TensorSigns` contains the data of
-map `ε : I → ℤˣ` and properties which allows the construction of a `TotalComplexShape c c c`. -/
+map `ε : I → ℤˣ` and properties which allow the construction of a `TotalComplexShape c c c`. -/
 class TensorSigns where
   /-- the signs which appear in the vertical differential of the total complex -/
   ε' : Multiplicative I →* ℤˣ
@@ -194,7 +194,7 @@ variable [TotalComplexShape c₁₂ c₃ c] [TotalComplexShape c₂ c₃ c₂₃
 `HomologicalComplex₂ C c₁ c₂ ⥤ HomologicalComplex C c₁₂`,
 `HomologicalComplex₂ C c₁₂ c₃ ⥤ HomologicalComplex C c`,
 `HomologicalComplex₂ C c₂ c₃ ⥤ HomologicalComplex C c₂₃`,
-`HomologicalComplex₂ C c₁ c₂₂₃ ⥤ HomologicalComplex C c`, we get two ways to
+`HomologicalComplex₂ C c₁ c₂₃ ⥤ HomologicalComplex C c`, we get two ways to
 compute the total complex of a triple complex in `HomologicalComplex₃ C c₁ c₂ c₃`, then
 under this assumption `[Associative c₁ c₂ c₃ c₁₂ c₂₃ c]`, these two complexes
 canonically identify (without introducing signs). -/

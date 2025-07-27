@@ -50,7 +50,7 @@ noncomputable abbrev kernelFork :
   KernelFork.ofι (biprod.lift sq.f₁₂ sq.f₁₃) (by simp [sq.fac])
 
 /-- A commutative square in a preadditive category is a pullback square iff
-the corresponding diagram `0 ⟶ X₁ ⟶ X₂ ⊞ X₃ ⟶ X₄ ⟶ 0` makes `X₁` a kernel. -/
+the corresponding diagram `0 ⟶ X₁ ⟶ X₂ ⊞ X₃ ⟶ X₄` makes `X₁` a kernel. -/
 noncomputable def isPullbackEquivIsLimitKernelFork :
     sq.IsPullback ≃ IsLimit sq.kernelFork :=
   Equiv.trans

@@ -32,7 +32,7 @@ variable {C : Type*} [Category C] [HasZeroMorphisms C] [HasZeroObject C]
 variable (K L M : HomologicalComplex C c') (φ : K ⟶ L) (φ' : L ⟶ M)
   (e : c.Embedding c') [e.IsRelIff]
 
-/-- The stupid truncation of a complex `K : HomologicalComplex C c'` relatively to
+/-- The stupid truncation of a complex `K : HomologicalComplex C c'` relative to
 an embedding `e : c.Embedding c'` of complex shapes. -/
 noncomputable def stupidTrunc : HomologicalComplex C c' := ((K.restriction e).extend e)
 

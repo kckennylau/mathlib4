@@ -131,7 +131,7 @@ noncomputable def CommSq.shortComplex' (sq : CommSq fst snd f g) : ShortComplex 
   zero := by simp [sq.w]
 
 /-- A commutative square in a preadditive category is a pullback square iff
-the corresponding diagram `0 ⟶ X₁ ⟶ X₂ ⊞ X₃ ⟶ X₄ ⟶ 0` makes `X₁` a kernel. -/
+the corresponding diagram `0 ⟶ X₁ ⟶ X₂ ⊞ X₃ ⟶ X₄` makes `X₁` a kernel. -/
 noncomputable def CommSq.isLimitEquivIsLimitKernelFork (sq : CommSq fst snd f g) :
     IsLimit (PullbackCone.mk _ _ sq.w) ≃ IsLimit sq.kernelFork where
   toFun h :=

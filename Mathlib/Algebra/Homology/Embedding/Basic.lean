@@ -45,7 +45,7 @@ in degrees in the image of `e.f` (TODO);
 - assuming `e.IsTruncLE`, we have truncation functors
 `e.truncLE'Functor C : HomologicalComplex C c' ⥤ HomologicalComplex C c` and
 `e.truncLEFunctor C : HomologicalComplex C c' ⥤ HomologicalComplex C c'`, and a natural
-transformation `e.ιTruncLENatTrans : e.truncGEFunctor C ⟶ 𝟭 _` which is a quasi-isomorphism
+transformation `e.ιTruncLENatTrans : e.truncLEFunctor C ⟶ 𝟭 _` which is a quasi-isomorphism
 in degrees in the image of `e.f` (TODO);
 
 -/
@@ -209,7 +209,7 @@ instance : embeddingUpNat.IsRelIff := by dsimp [embeddingUpNat]; infer_instance
 instance : embeddingUpNat.IsTruncGE where
   mem_next {j _} h := ⟨j + 1, h⟩
 
-/-- The embedding from `down ℕ` to `up ℤ` with sends `n` to `-n`. -/
+/-- The embedding from `down ℕ` to `up ℤ` which sends `n` to `-n`. -/
 @[simps!]
 def embeddingDownNat : Embedding (down ℕ) (up ℤ) :=
   Embedding.mk' _ _ (fun n => -n)

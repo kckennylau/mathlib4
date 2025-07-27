@@ -32,8 +32,8 @@ variable (i j k : ι) (hi : c.prev j = i) (hk : c.next j = k)
   (hi'' : c'.prev j' = i') (hk'' : c'.next j' = k')
 
 /-- The isomorphism `(K.restriction e).sc' i j k ≅ K.sc' i' j' k'` when
-`e` is an embedding of complex shapes, `i'`, `j`, `k`' are the respective
-images of `i`, `j`, `k` by `e.f`, `j` is the previous index of `i`, etc. -/
+`e` is an embedding of complex shapes, `i'`, `j'`, `k'` are the respective
+images of `i`, `j`, `k` by `e.f`, `i` is the previous index of `j`, etc. -/
 @[simps!]
 def sc'Iso : (K.restriction e).sc' i j k ≅ K.sc' i' j' k' :=
   ShortComplex.isoMk (K.restrictionXIso e hi') (K.restrictionXIso e hj') (K.restrictionXIso e hk')

@@ -10,7 +10,7 @@ import Mathlib.Algebra.Homology.Embedding.RestrictionHomology
 
 Given a chain complex `K`: `... ⟶ K.X 2 ⟶ K.X 1 ⟶ K.X 0`,
 a cochain complex `L`: `L.X 0 ⟶ L.X 1 ⟶ L.X 2 ⟶ ...`,
-a morphism `d₀ : K.X 0 ⟶ L.X 0` satisfying the identifies `K.d 1 0 ≫ d₀ = 0`
+a morphism `d₀ : K.X 0 ⟶ L.X 0` satisfying the identities `K.d 1 0 ≫ d₀ = 0`
 and `d₀ ≫ L.d 0 1 = 0`, we construct a cochain complex indexed by `ℤ` of the form
 `... ⟶ K.X 2 ⟶ K.X 1 ⟶ K.X 0 ⟶ L.X 0 ⟶ L.X 1 ⟶ L.X 2 ⟶ ...`,
 where `K.X 0` lies in degree `-1` and `L.X 0` in degree `0`.
@@ -52,7 +52,7 @@ variable (K : ChainComplex C ℕ) (L : CochainComplex C ℕ)
 allows to connect `K` and `L` in order to get a cochain complex indexed by `ℤ`,
 see `ConnectData.cochainComplex`. -/
 structure ConnectData where
-  /-- the differential which connect `K` and `L` -/
+  /-- the differential which connects `K` and `L` -/
   d₀ : K.X 0 ⟶ L.X 0
   comp_d₀ : K.d 1 0 ≫ d₀ = 0
   d₀_comp : d₀ ≫ L.d 0 1 = 0

@@ -75,7 +75,7 @@ noncomputable def abCyclesIso : S.cycles ≅ AddCommGrp.of (AddMonoidHom.ker S.g
 
 -- This was a simp lemma until we made `AddCommGrp.coe_of` a simp lemma,
 -- after which the simp normal form linter complains.
--- It was not used a simp lemma in Mathlib.
+-- It was not used as a simp lemma in Mathlib.
 -- Possible solution: higher priority function coercions that remove the `of`?
 -- @[simp]
 lemma abCyclesIso_inv_apply_iCycles (x : AddMonoidHom.ker S.g.hom) :

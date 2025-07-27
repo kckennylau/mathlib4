@@ -7,7 +7,7 @@ import Mathlib.Algebra.Homology.Additive
 import Mathlib.Algebra.Homology.HomologicalComplexLimits
 import Mathlib.Algebra.Homology.ShortComplex.ShortExact
 
-/-! # THe category of homological complexes is abelian
+/-! # The category of homological complexes is abelian
 
 If `C` is an abelian category, then `HomologicalComplex C c` is an abelian
 category for any complex shape `c : ComplexShape ι`.

@@ -12,8 +12,8 @@ import Mathlib.CategoryTheory.Abelian.Exact
 /-!
 # Exact functors
 
-In this file, it is shown that additive functors which preserves homology
-also preserves finite limits and finite colimits.
+In this file, it is shown that additive functors which preserve homology
+also preserve finite limits and finite colimits.
 
 ## Main results
 
@@ -72,7 +72,7 @@ lemma preservesFiniteLimits_of_preservesHomology
     ⟨F.obj 0, by rw [IsZero.iff_id_eq_zero, ← F.map_id, id_zero, F.map_zero]⟩
   exact preservesFiniteLimits_of_preservesKernels F
 
-/-- An additive which preserves homology preserves finite colimits. -/
+/-- An additive functor which preserves homology preserves finite colimits. -/
 lemma preservesFiniteColimits_of_preservesHomology
     [HasFiniteCoproducts C] [HasCokernels C] : PreservesFiniteColimits F := by
   have := fun {X Y : C} (f : X ⟶ Y) ↦ PreservesHomology.preservesCokernel F f
@@ -92,7 +92,7 @@ variable (F : C ⥤ D) [F.Additive]
 /--
 If a functor `F : C ⥤ D` preserves short exact sequences on the left hand side, (i.e.
 if `0 ⟶ A ⟶ B ⟶ C ⟶ 0` is exact then `0 ⟶ F(A) ⟶ F(B) ⟶ F(C)` is exact)
-then it preserves monomorphism.
+then it preserves monomorphisms.
 -/
 lemma preservesMonomorphisms_of_preserves_shortExact_left
     (h : ∀ (S : ShortComplex C), S.ShortExact → (S.map F).Exact ∧ Mono (F.map S.f)) :
@@ -100,7 +100,7 @@ lemma preservesMonomorphisms_of_preserves_shortExact_left
   preserves f := h _ { exact := exact_cokernel f } |>.2
 
 /--
-For an addivite functor `F : C ⥤ D` between abelian categories, the following are equivalent:
+For an additive functor `F : C ⥤ D` between abelian categories, the following are equivalent:
 - `F` preserves short exact sequences on the left hand side, i.e. if `0 ⟶ A ⟶ B ⟶ C ⟶ 0` is exact
   then `0 ⟶ F(A) ⟶ F(B) ⟶ F(C)` is exact.
 - `F` preserves exact sequences on the left hand side, i.e. if `A ⟶ B ⟶ C` is exact where `A ⟶ B`
@@ -154,7 +154,7 @@ lemma preservesEpimorphisms_of_preserves_shortExact_right
   preserves f := h _ { exact := exact_kernel f } |>.2
 
 /--
-For an addivite functor `F : C ⥤ D` between abelian categories, the following are equivalent:
+For an additive functor `F : C ⥤ D` between abelian categories, the following are equivalent:
 - `F` preserves short exact sequences on the right hand side, i.e. if `0 ⟶ A ⟶ B ⟶ C ⟶ 0` is
   exact then `F(A) ⟶ F(B) ⟶ F(C) ⟶ 0` is exact.
 - `F` preserves exact sequences on the right hand side, i.e. if `A ⟶ B ⟶ C` is exact where `B ⟶ C`

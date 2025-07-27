@@ -16,7 +16,7 @@ not of the form `e.f i`. This defines two typeclasses `K.IsSupported e`
 and `K.IsStrictlySupported e`.
 
 We also define predicates `K.IsSupportedOutside e` and `K.IsStrictlySupportedOutside e`
-when the conditions above are satisfied for those `i'` that are of the form `e.f i`.
+when the conditions above are satisfied for those `i'` that are not of the form `e.f i`.
 (These two predicates are not made typeclasses because in most practical applications,
 they are equivalent to `K.IsSupported e'` or `K.IsStrictlySupported e'` for a
 complementary embedding `e'`.)
@@ -62,7 +62,7 @@ instance [K.IsStrictlySupported e] :
   rw [isStrictlySupported_op_iff]
   infer_instance
 
-/-- If `K : HomologicalComplex C c'`, then `K.IsStrictlySupported e` holds for
+/-- If `K : HomologicalComplex C c'`, then `K.IsSupported e` holds for
 an embedding `e : c.Embedding c'` of complex shapes if `K` is exact at `i'`
 whenever `i'` is not of the form `e.f i` for some `i`. -/
 class IsSupported : Prop where

@@ -12,7 +12,7 @@ import Mathlib.Algebra.Homology.QuasiIso
 
 Given an embedding `e : c.Embedding c'` and `K : HomologicalComplex C c`, we shall
 compute the homology of `K.extend e`. In degrees that are not in the image of `e.f`,
-the homology is obviously zero. When `e.f j = j`, we construct an isomorphism
+the homology is obviously zero. When `e.f j = j'`, we construct an isomorphism
 `(K.extend e).homology j' ≅ K.homology j`.
 
 -/
@@ -63,14 +63,14 @@ namespace leftHomologyData
 variable (cone : KernelFork (K.d j k)) (hcone : IsLimit cone)
 
 /-- The kernel fork of `(K.extend e).d j' k'` that is deduced from a kernel
-fork of `K.d j k `. -/
+fork of `K.d j k`. -/
 @[simp]
 noncomputable def kernelFork : KernelFork ((K.extend e).d j' k') :=
   KernelFork.ofι (cone.ι ≫ (extendXIso K e hj').inv)
     (by rw [assoc, ← comp_d_eq_zero_iff K e hj' hk hk' cone.ι, cone.condition])
 
 /-- The limit kernel fork of `(K.extend e).d j' k'` that is deduced from a limit
-kernel fork of `K.d j k `. -/
+kernel fork of `K.d j k`. -/
 noncomputable def isLimitKernelFork : IsLimit (kernelFork K e hj' hk hk' cone) :=
   KernelFork.isLimitOfIsLimitOfIff hcone ((K.extend e).d j' k')
     (extendXIso K e hj').symm (comp_d_eq_zero_iff K e hj' hk hk')
@@ -183,7 +183,7 @@ lemma d_comp_desc_eq_zero_iff' ⦃W : C⦄ (f' : cocone.pt ⟶ K.X k)
       apply Cofork.IsColimit.hom_ext hcocone
       rw [reassoc_of% hf', ← cancel_epi (extendXIso K e hj').hom, hf'',
         K.extend_d_eq e hj' hk'']
-    rw [← cancel_mono (K.extendXIso e hk'').inv, zero_comp, assoc, this]
+    rw [← cancel_mono (K.extendXIso K e hk'').inv, zero_comp, assoc, this]
   · have h₁ : f' = 0 := by
       apply Cofork.IsColimit.hom_ext hcocone
       simp only [hf', comp_zero, K.shape _ _ hjk]

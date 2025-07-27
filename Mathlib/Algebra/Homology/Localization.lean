@@ -192,8 +192,8 @@ variable [(HomotopyCategory.quotient C c).IsLocalization
   (HomologicalComplex.homotopyEquivalences C c)]
 
 /-- The category `HomologicalComplexUpToQuasiIso C c` which was defined as a localization of
-`HomologicalComplex C c` with respect to quasi-isomorphisms also identify to a localization
-of the homotopy category with respect ot quasi-isomorphisms. -/
+`HomologicalComplex C c` with respect to quasi-isomorphisms also identifies to a localization
+of the homotopy category with respect to quasi-isomorphisms. -/
 instance : HomologicalComplexUpToQuasiIso.Qh.IsLocalization (HomotopyCategory.quasiIso C c) :=
   Functor.IsLocalization.of_comp (HomotopyCategory.quotient C c)
     Qh (HomologicalComplex.homotopyEquivalences C c)
@@ -284,7 +284,7 @@ instance : (ComplexShape.up ℤ).QFactorsThroughHomotopy C :=
 
 /-- When we define the derived category as `HomologicalComplexUpToQuasiIso C (ComplexShape.up ℤ)`,
 i.e. as the localization of cochain complexes with respect to quasi-isomorphisms, this
-example shall say that the derived category is also the localization of the homotopy
+example says that the derived category is also the localization of the homotopy
 category with respect to quasi-isomorphisms. -/
 example [(HomologicalComplex.quasiIso C (ComplexShape.up ℤ)).HasLocalization] :
     HomologicalComplexUpToQuasiIso.Qh.IsLocalization

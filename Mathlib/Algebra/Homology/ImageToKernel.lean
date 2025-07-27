@@ -140,7 +140,7 @@ instance imageToKernel_epi_of_zero_of_mono [HasKernels V] [HasZeroObject V] [Mon
     Epi (imageToKernel (0 : A ⟶ B) g (by simp)) :=
   epi_of_target_iso_zero _ (kernelSubobjectIso g ≪≫ kernel.ofMono g)
 
-/-- `imageToKernel` for `A --f--> B --0--> C`, where `g` is an epi is itself an epi
+/-- `imageToKernel` for `A --f--> B --0--> C`, where `f` is an epi is itself an epi
 (i.e. the sequence is exact at `B`).
 -/
 instance imageToKernel_epi_of_epi_of_zero [HasImages V] [Epi f] :

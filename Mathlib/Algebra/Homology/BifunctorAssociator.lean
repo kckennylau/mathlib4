@@ -45,7 +45,6 @@ variable {C₁ C₂ C₁₂ C₂₃ C₃ C₄ : Type*}
   [HasZeroMorphisms C₁] [HasZeroMorphisms C₂] [HasZeroMorphisms C₃]
   [Preadditive C₁₂] [Preadditive C₂₃] [Preadditive C₄]
   {F₁₂ : C₁ ⥤ C₂ ⥤ C₁₂} {G : C₁₂ ⥤ C₃ ⥤ C₄}
-  {F : C₁ ⥤ C₂₃ ⥤ C₄} {G₂₃ : C₂ ⥤ C₃ ⥤ C₂₃}
   [F₁₂.PreservesZeroMorphisms] [∀ (X₁ : C₁), (F₁₂.obj X₁).PreservesZeroMorphisms]
   [G.Additive] [∀ (X₁₂ : C₁₂), (G.obj X₁₂).PreservesZeroMorphisms]
   [G₂₃.PreservesZeroMorphisms] [∀ (X₂ : C₂), (G₂₃.obj X₂).PreservesZeroMorphisms]
@@ -64,7 +63,7 @@ variable {C₁ C₂ C₁₂ C₂₃ C₃ C₄ : Type*}
 variable (F₁₂ G) in
 /-- Given bifunctors `F₁₂ : C₁ ⥤ C₂ ⥤ C₁₂`, `G : C₁₂ ⥤ C₃ ⥤ C₄`, homological complexes
 `K₁ : HomologicalComplex C₁ c₁`, `K₂ : HomologicalComplex C₂ c₂` and
-`K₃ : HomologicalComplex C₃ c₃`, and complexes shapes `c₁₂`, `c₄`, this asserts
+`K₃ : HomologicalComplex C₃ c₃`, and complex shapes `c₁₂`, `c₄`, this asserts
 that for all `i₁₂ : ι₁₂` and `i₃ : ι₃`, the functor `G(-, K₃.X i₃)` commutes with
 the coproducts of the `F₁₂(X₁ i₁, X₂ i₂)` such that `π c₁ c₂ c₁₂ ⟨i₁, i₂⟩ = i₁₂`. -/
 abbrev HasGoodTrifunctor₁₂Obj :=
@@ -74,7 +73,7 @@ abbrev HasGoodTrifunctor₁₂Obj :=
 variable (F G₂₃) in
 /-- Given bifunctors `F : C₁ ⥤ C₂₃ ⥤ C₄`, `G₂₃ : C₂ ⥤ C₃ ⥤ C₂₃`, homological complexes
 `K₁ : HomologicalComplex C₁ c₁`, `K₂ : HomologicalComplex C₂ c₂` and
-`K₃ : HomologicalComplex C₃ c₃`, and complexes shapes `c₁₂`, `c₂₃`, `c₄`
+`K₃ : HomologicalComplex C₃ c₃`, and complex shapes `c₁₂`, `c₂₃`, `c₄`
 with `ComplexShape.Associative c₁ c₂ c₃ c₁₂ c₂₃ c₄`, this asserts that for
 all `i₁ : ι₁` and `i₂₃ : ι₂₃`, the functor `F(K₁.X i₁, _)` commutes with
 the coproducts of the `G₂₃(K₂.X i₂, K₃.X i₃)`
@@ -319,7 +318,7 @@ lemma ι_D₃ :
   · rw [d₃_eq _ _ _ _ _ _ _ _ _ h₁]
     by_cases h₂ : ComplexShape.π c₁₂ c₃ c₄ (c₁.π c₂ c₁₂ (i₁, i₂), c₃.next i₃) = j'
     · rw [mapBifunctor.d₂_eq _ _ _ _ _ h₁ _ h₂,
-        ιOrZero_eq _ _ _ _ _ _ _ _ _ _ _ h₂,
+        ιOrZero_eq _ _ _ _ _ _ _ _ _ _ _ _ h₂,
         Linear.comp_units_smul, smul_left_cancel_iff,
         ι_eq _ _ _ _ _ _ _ _ _ _ _ _ rfl h₂,
         NatTrans.naturality_assoc]

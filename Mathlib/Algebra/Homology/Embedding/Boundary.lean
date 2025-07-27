@@ -20,7 +20,7 @@ a certain cochain complex indexed by `ℕ`:
 
 where in degree `0`, the object `Q` identifies to the cokernel
 of `K.X (p - 1) ⟶ K.X p` (this is `K.opcycles p`). In this case,
-we see that the degree `0 : ℕ` needs a particular attention when
+we see that the degree `0 : ℕ` needs particular attention when
 constructing the truncation.
 
 In this file, more generally, for `e : Embedding c c'`, we define

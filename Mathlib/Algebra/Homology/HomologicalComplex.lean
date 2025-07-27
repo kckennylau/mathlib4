@@ -28,7 +28,7 @@ and similarly `CochainComplex V α`, with `i = j + 1`.
 There is a category structure, where morphisms are chain maps.
 
 For `C : HomologicalComplex V c`, we define `C.xNext i`, which is either `C.X j` for some
-arbitrarily chosen `j` such that `c.r i j`, or `C.X i` if there is no such `j`.
+arbitrarily chosen `j` such that `c.Rel i j`, or `C.X i` if there is no such `j`.
 Similarly we have `C.xPrev j`.
 Defined in terms of these we have `C.dFrom i : C.X i ⟶ C.xNext i` and
 `C.dTo j : C.xPrev j ⟶ C.X j`, which are either defined as `C.d i j`, or zero, as needed.
@@ -341,7 +341,7 @@ instance : (forget V c).Faithful where
     ext i
     exact congr_fun h i
 
-/-- Forgetting the differentials than picking out the `i`-th object is the same as
+/-- Forgetting the differentials then picking out the `i`-th object is the same as
 just picking out the `i`-th object. -/
 @[simps!]
 def forgetEval (i : ι) : forget V c ⋙ GradedObject.eval i ≅ eval V c i :=
@@ -408,7 +408,7 @@ def xPrevIsoSelf {j : ι} (h : ¬c.Rel (c.prev j) j) : C.xPrev j ≅ C.X j :=
         have : c.prev j = i := c.prev_eq' hi
         rw [this] at h; contradiction)
 
-/-- Either `C.X j`, if there is some `j` with `c.rel i j`, or `C.X i`. -/
+/-- Either `C.X j`, if there is some `j` with `c.Rel i j`, or `C.X i`. -/
 abbrev xNext (i : ι) : V :=
   C.X (c.next i)
 
