@@ -33,7 +33,7 @@ instance instMonoidWithZero [MonoidWithZero α] : MonoidWithZero αᵐᵒᵖ whe
   __ := instMonoid
   __ := instMulZeroOneClass
 
-instance instGroupWithZero [GroupWithZero α] : GroupWithZero αᵐᵒᵖ where
+instance instGroupWithZero [GroupWithZero α] : GroupWithZero αᵐᵖ where
   __ := instMonoidWithZero
   __ := instNontrivial
   __ := instDivInvMonoid

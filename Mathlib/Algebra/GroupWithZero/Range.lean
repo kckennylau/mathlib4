@@ -30,7 +30,7 @@ explicitly (see `MonoidWithZeroHom.mem_valueGroup_iff_of_comm`).
 * `valueMonoid f` is the smallest submonoid of `Bˣ` containing the range of `f`;
 * `valueMonoid₀ f` is the smallest submonoid with `0` containing the range of `f`;
 * `valueGroup f` is the smallest subgroup of `Bˣ` containing the range of `f`;
-* `valueMonoid₀ f` is the smallest subgroup with `0` containing the range of `f`;
+* `valueGroup₀ f` is the smallest subgroup with `0` containing the range of `f`;
 * When `B` is a group with zero, rather than merely a monoid with zero, the above definitions
 all coincide: see `valueMonoid_eq_valueGroup` for an equality as submonoids and
 `valueMonoid_eq_valueGroup'` for an equality as subsets.
@@ -117,7 +117,7 @@ noncomputable section GroupWithZero
 
 variable [GroupWithZero A] [GroupWithZero B] [MonoidWithZeroHomClass F A B] {f}
 
-/- When the *domain* is itself a group with zero, the `valueMonoid` and the `valueGroup` coincide.-/
+/- When the *domain* is itself a group with zero, the `valueMonoid` and the `valueGroup` coincide. -/
 lemma valueMonoid_eq_valueGroup : (valueMonoid f) = (valueGroup f).toSubmonoid := by
   rw [valueGroup_def, Subgroup.closure_toSubmonoid, Eq.comm]
   apply Submonoid.closure_eq_of_le

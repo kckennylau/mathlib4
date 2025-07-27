@@ -35,3 +35,4 @@ alias ⟨IsUnit.apply, _⟩ := Pi.isUnit_iff
 @[to_additive]
 lemma IsUnit.val_inv_apply (hx : IsUnit x) (i : ι) : (hx.unit⁻¹).1 i = (hx.apply i).unit⁻¹ := by
   rw [← Units.inv_eq_val_inv, ← MulEquiv.val_inv_piUnits_apply]; congr; ext; rfl
+

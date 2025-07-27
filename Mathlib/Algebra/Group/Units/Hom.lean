@@ -51,9 +51,9 @@ theorem IsUnit.eq_on_inv {F G N} [DivisionMonoid G] [Monoid N] [FunLike F G N]
   left_inv_eq_right_inv (map_mul_eq_one f hx.inv_mul_cancel)
     (h.symm ▸ map_mul_eq_one g (hx.mul_inv_cancel))
 
-/-- If two homomorphism from a group to a monoid are equal at `x`, then they are equal at `x⁻¹`. -/
+/-- If two homomorphisms from a group to a monoid are equal at `x`, then they are equal at `x⁻¹`. -/
 @[to_additive
-    "If two homomorphism from an additive group to an additive monoid are equal at `x`,
+    "If two homomorphisms from an additive group to an additive monoid are equal at `x`,
     then they are equal at `-x`."]
 theorem eq_on_inv {F G M} [Group G] [Monoid M] [FunLike F G M] [MonoidHomClass F G M]
     (f g : F) {x : G} (h : f x = g x) : f x⁻¹ = g x⁻¹ :=

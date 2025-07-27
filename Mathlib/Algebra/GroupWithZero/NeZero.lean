@@ -30,7 +30,7 @@ instance NeZero.one : NeZero (1 : M₀) := ⟨by
     _ = 1 * y := by rw [h, zero_mul]
     _ = y := by rw [one_mul]⟩
 
-/-- Pullback a `Nontrivial` instance along a function sending `0` to `0` and `1` to `1`. -/
+/-- Pull back a `Nontrivial` instance along a function sending `0` to `0` and `1` to `1`. -/
 theorem domain_nontrivial [Zero M₀'] [One M₀'] (f : M₀' → M₀) (zero : f 0 = 0) (one : f 1 = 1) :
     Nontrivial M₀' :=
   ⟨⟨0, 1, mt (congr_arg f) <| by

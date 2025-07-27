@@ -11,7 +11,7 @@ import Mathlib.Data.Set.Lattice.Image
 # Subsemigroups: `CompleteLattice` structure
 
 This file defines a `CompleteLattice` structure on `Subsemigroup`s,
-and define the closure of a set as the minimal subsemigroup that includes this set.
+and defines the closure of a set as the minimal subsemigroup that includes this set.
 
 ## Main definitions
 
@@ -187,7 +187,7 @@ theorem dense_induction {p : M → Prop} (s : Set M) (closure : closure s = ⊤)
   | mul _ _ _ _ h₁ h₂ => exact mul _ _ h₁ h₂
 
 /- The argument `s : Set M` is explicit in `Subsemigroup.dense_induction` because the type of the
-induction variable, namely `x : M`, does not reference `x`. Making `s` explicit allows the user
+induction variable, namely `x : M`, does not reference `s`. Making `s` explicit allows the user
 to apply the induction principle while deferring the proof of `closure s = ⊤` without creating
 metavariables, as in the following example. -/
 example {p : M → Prop} (s : Set M) (closure : closure s = ⊤)

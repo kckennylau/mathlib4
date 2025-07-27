@@ -22,3 +22,4 @@ instance [MulZeroOneClass α] : MulZeroOneClass (Shrink α) := (equivShrink _).s
 
 instance [Monoid M] [AddCommMonoid α] [DistribMulAction M α] : DistribMulAction M (Shrink.{v} α) :=
   (equivShrink α).symm.distribMulAction M
+

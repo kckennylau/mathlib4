@@ -9,7 +9,7 @@ import Mathlib.Algebra.GroupWithZero.InjSurj
 /-!
 # `ULift` instances for groups and monoids with zero
 
-This file defines instances for group and monoid with zero and related structures on `ULift` types.
+This file defines instances for groups and monoids with zero and related structures on `ULift` types.
 
 (Recall `ULift α` is just a "copy" of a type `α` in a higher universe.)
 -/

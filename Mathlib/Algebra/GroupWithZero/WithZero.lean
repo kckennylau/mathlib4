@@ -31,7 +31,7 @@ In locale `WithZero`:
 * `WithZero.map'`: the `MonoidWithZero` homomorphism `WithZero α →* WithZero β` induced by
   a monoid homomorphism `f : α →* β`.
 * `WithZero.exp`: The "exponential map" `M → Mᵐ⁰`
-* `WithZero.exp`: The "logarithm" `Mᵐ⁰ → M`
+* `WithZero.log`: The "logarithm" `Mᵐ⁰ → M`
 -/
 
 open Function

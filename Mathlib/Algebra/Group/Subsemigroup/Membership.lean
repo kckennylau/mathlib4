@@ -13,7 +13,7 @@ The intent is to mimic `GroupTheory/Submonoid/Membership`, but currently this fi
 stub and only provides rudimentary support.
 
 * `mem_iSup_of_directed`, `coe_iSup_of_directed`, `mem_sSup_of_directed_on`,
-  `coe_sSup_of_directed_on`: the supremum of a directed collection of subsemigroup is their union.
+  `coe_sSup_of_directed_on`: the supremum of a directed collection of subsemigroups is their union.
 
 ## TODO
 
@@ -93,10 +93,10 @@ theorem mem_sSup_of_mem {S : Set (Subsemigroup M)} {s : Subsemigroup M} (hs : s 
   tauto
 
 /-- An induction principle for elements of `⨆ i, S i`.
-If `C` holds all elements of `S i` for all `i`, and is preserved under multiplication,
+If `C` holds for all elements of `S i` for all `i`, and is preserved under multiplication,
 then it holds for all elements of the supremum of `S`. -/
 @[to_additive (attr := elab_as_elim)
-"An induction principle for elements of `⨆ i, S i`. If `C` holds all
+"An induction principle for elements of `⨆ i, S i`. If `C` holds for all
 elements of `S i` for all `i`, and is preserved under addition, then it holds for all elements of
 the supremum of `S`."]
 theorem iSup_induction (S : ι → Subsemigroup M) {C : M → Prop} {x₁ : M} (hx₁ : x₁ ∈ ⨆ i, S i)

@@ -803,7 +803,7 @@ theorem Normal.subgroupOf {H : Subgroup G} (hH : H.Normal) (K : Subgroup G) :
   hH.comap _
 
 @[to_additive]
-instance (priority := 100) normal_subgroupOf {H N : Subgroup G} [N.Normal] :
+instance (priority := 100) normal_subgroupOf {H N : Subgroup G} [N.Normal] (hN : N.Normal) :
     (N.subgroupOf H).Normal :=
   Subgroup.normal_comap _
 

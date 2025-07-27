@@ -61,7 +61,7 @@ postfix:1024 "ˣ" => Units
 
 An element of an `AddMonoid` is a unit if it has a two-sided additive inverse.
 This version bundles the inverse element so that it can be computed.
-For a predicate see `isAddUnit`. -/
+For a predicate see `IsAddUnit`. -/
 structure AddUnits (α : Type u) [AddMonoid α] where
   /-- The underlying value in the base `AddMonoid`. -/
   val : α
@@ -122,7 +122,7 @@ theorem val_inj {a b : αˣ} : (a : α) = b ↔ a = b :=
 
 /-- Units have decidable equality if the base `Monoid` has decidable equality. -/
 @[to_additive "Additive units have decidable equality
-if the base `AddMonoid` has deciable equality."]
+if the base `AddMonoid` has decidable equality."]
 instance [DecidableEq α] : DecidableEq αˣ := fun _ _ => decidable_of_iff' _ Units.ext_iff
 
 @[to_additive (attr := simp)]

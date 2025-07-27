@@ -56,3 +56,4 @@ theorem mem_closure_range_iff_of_fintype [Fintype ι] :
   simp
 
 end Subgroup
+

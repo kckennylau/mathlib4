@@ -133,7 +133,7 @@ theorem _root_.Group.mulRight_bijective (a : G) : Function.Bijective (· * a) :=
   (Equiv.mulRight a).bijective
 
 /-- A version of `Equiv.mulLeft a b⁻¹` that is defeq to `a / b`. -/
-@[to_additive (attr := simps) " A version of `Equiv.addLeft a (-b)` that is defeq to `a - b`. "]
+@[to_additive (attr := simps) "A version of `Equiv.addLeft a (-b)` that is defeq to `a - b`."]
 protected def divLeft (a : G) : G ≃ G where
   toFun b := a / b
   invFun b := b⁻¹ * a
@@ -146,7 +146,7 @@ theorem divLeft_eq_inv_trans_mulLeft (a : G) :
   ext fun _ => div_eq_mul_inv _ _
 
 /-- A version of `Equiv.mulRight a⁻¹ b` that is defeq to `b / a`. -/
-@[to_additive (attr := simps) " A version of `Equiv.addRight (-a) b` that is defeq to `b - a`. "]
+@[to_additive (attr := simps) "A version of `Equiv.addRight (-a) b` that is defeq to `b - a`."]
 protected def divRight (a : G) : G ≃ G where
   toFun b := b / a
   invFun b := b * a

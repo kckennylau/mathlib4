@@ -8,7 +8,7 @@ import Mathlib.Algebra.Group.Units.Defs
 import Mathlib.Logic.Unique
 
 /-!
-# The unit of the natural numbers
+# The units of the natural numbers
 -/
 
 assert_not_exists MonoidWithZero DenselyOrdered

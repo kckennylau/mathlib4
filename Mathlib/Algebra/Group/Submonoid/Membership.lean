@@ -21,7 +21,7 @@ In this file we prove various facts about membership in a submonoid:
 * `pow_mem`, `nsmul_mem`: if `x ∈ S` where `S` is a multiplicative (resp., additive) submonoid and
   `n` is a natural number, then `x^n` (resp., `n • x`) belongs to `S`;
 * `mem_iSup_of_directed`, `coe_iSup_of_directed`, `mem_sSup_of_directedOn`,
-  `coe_sSup_of_directedOn`: the supremum of a directed collection of submonoid is their union.
+  `coe_sSup_of_directedOn`: the supremum of a directed collection of submonoids is their union.
 * `sup_eq_range`, `mem_sup`: supremum of two submonoids `S`, `T` of a commutative monoid is the set
   of products;
 * `closure_singleton_eq`, `mem_closure_singleton`, `mem_closure_pair`: the multiplicative (resp.,

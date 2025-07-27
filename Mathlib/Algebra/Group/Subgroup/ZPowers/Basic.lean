@@ -73,7 +73,7 @@ theorem forall_mem_zpowers {x : G} {p : G → Prop} : (∀ g ∈ zpowers x, p g)
   Set.forall_mem_range
 
 @[to_additive]
-theorem exists_mem_zpowers {x : G} {p : G → Prop} : (∃ g ∈ zpowers x, p g) ↔ ∃ m : ℤ, p (x ^ m) :=
+theorem exists_mem_zpowers {x : G} {p : G → Prop} : (∃ g ∈ zpowers x, p) ↔ ∃ m : ℤ, p (x ^ m) :=
   Set.exists_range_iff
 
 end Subgroup

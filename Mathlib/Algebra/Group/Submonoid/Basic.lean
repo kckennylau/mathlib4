@@ -12,8 +12,8 @@ import Mathlib.Algebra.Group.Units.Defs
 /-!
 # Submonoids: `CompleteLattice` structure
 
-This file defines a `CompleteLattice` structure on `Submonoid`s, define the closure of a set as the
-minimal submonoid that includes this set, and prove a few results about extending properties from a
+This file defines a `CompleteLattice` structure on `Submonoid`s, defines the closure of a set as the
+minimal submonoid that includes this set, and proves a few results about extending properties from a
 dense set (i.e. a set with `closure s = ⊤`) to the whole monoid, see `Submonoid.dense_induction` and
 `MonoidHom.ofClosureEqTopLeft`/`MonoidHom.ofClosureEqTopRight`.
 
@@ -208,7 +208,7 @@ theorem dense_induction {motive : M → Prop} (s : Set M) (closure : closure s =
   | mul _ _ _ _ h₁ h₂ => exact mul _ _ h₁ h₂
 
 /- The argument `s : Set M` is explicit in `Submonoid.dense_induction` because the type of the
-induction variable, namely `x : M`, does not reference `x`. Making `s` explicit allows the user
+induction variable, namely `x : M`, does not reference `s`. Making `s` explicit allows the user
 to apply the induction principle while deferring the proof of `closure s = ⊤` without creating
 metavariables, as in the following example. -/
 example {p : M → Prop} (s : Set M) (closure : closure s = ⊤) (mem : ∀ x ∈ s, p x)

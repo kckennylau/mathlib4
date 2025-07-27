@@ -16,7 +16,7 @@ This file provides the actions
 * `Subgroup.pointwiseMulAction`
 * `AddSubgroup.pointwiseMulAction`
 
-which matches the action of `Set.mulActionSet`.
+which match the action of `Set.mulActionSet`.
 
 These actions are available in the `Pointwise` locale.
 

@@ -20,7 +20,7 @@ In the names of these operations, we treat `a` as the “left” argument, and b
 “right” arguments. This way most names in this file agree with the names of the corresponding lemmas
 for `Commute a b = SemiconjBy a b b`. As a side effect, some lemmas have only `_right` version.
 
-Lean does not immediately recognise these terms as equations, so for rewriting we need syntax like
+Lean does not immediately recognize these terms as equations, so for rewriting we need syntax like
 `rw [(h.pow_right 5).eq]` rather than just `rw [h.pow_right 5]`.
 
 This file provides only basic operations (`mul_left`, `mul_right`, `inv_right` etc). Other

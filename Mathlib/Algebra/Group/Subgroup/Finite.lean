@@ -11,7 +11,7 @@ import Mathlib.Data.Set.Finite.Range
 /-!
 # Subgroups
 
-This file provides some result on multiplicative and additive subgroups in the finite context.
+This file provides some results on multiplicative and additive subgroups in the finite context.
 
 ## Tags
 subgroup, subgroups

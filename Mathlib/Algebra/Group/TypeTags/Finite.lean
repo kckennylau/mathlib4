@@ -38,3 +38,4 @@ instance Multiplicative.fintype : ∀ [Fintype α], Fintype (Multiplicative α) 
 
 @[simp] lemma Fintype.card_additive (α : Type*) [Fintype α] : card (Additive α) = card α :=
   Finset.card_map _
+
