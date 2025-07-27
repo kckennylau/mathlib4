@@ -13,7 +13,7 @@ import Mathlib.Data.Multiset.Fold
 
 ## Main definitions
 
-- `Multiset.gcd` - the greatest common denominator of a `Multiset` of elements of a `GCDMonoid`
+- `Multiset.gcd` - the greatest common divisor of a `Multiset` of elements of a `GCDMonoid`
 - `Multiset.lcm` - the least common multiple of a `Multiset` of elements of a `GCDMonoid`
 
 ## Implementation notes

@@ -134,13 +134,13 @@ instance [RightCancelSemigroup G] [RightCancelSemigroup H] : RightCancelSemigrou
 @[to_additive]
 instance [LeftCancelMonoid M] [LeftCancelMonoid N] : LeftCancelMonoid (M × N) :=
   { mul_one := by simp,
-    one_mul := by simp
+    one_mul := by simp,
     mul_left_cancel := by simp }
 
 @[to_additive]
 instance [RightCancelMonoid M] [RightCancelMonoid N] : RightCancelMonoid (M × N) :=
   { mul_one := by simp,
-    one_mul := by simp
+    one_mul := by simp,
     mul_right_cancel := by simp }
 
 @[to_additive]

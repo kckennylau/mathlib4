@@ -160,3 +160,4 @@ def invertibleEquivOfLeftInverse {R : Type*} {S : Type*} {F G : Type*} [Monoid R
   invFun _ := Invertible.map f _
   left_inv _ := Subsingleton.elim _ _
   right_inv _ := Subsingleton.elim _ _
+

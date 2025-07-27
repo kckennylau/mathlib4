@@ -76,7 +76,7 @@ namespace fwdDiff_aux
 This section contains versions of the forward-difference operator and the shift operator bundled as
 `ℤ`-linear endomorphisms. These are useful for certain proofs; but they are slightly annoying to
 use, as the source and target types of the maps have to be specified each time, and various
-coercions need to be un-wound when the operators are applied, so we also provide the un-bundled
+coercions need to be unwound when the operators are applied, so we also provide the un-bundled
 version.
 -/
 
@@ -193,3 +193,4 @@ lemma fwdDiff_addChar_eq {M R : Type*} [AddCommMonoid M] [Ring R]
   | succ n IH =>
     simp only [pow_succ, Function.iterate_succ_apply', fwdDiff, IH, ← mul_sub, mul_assoc]
     rw [sub_mul, ← AddChar.map_add_eq_mul, add_comm h x, one_mul]
+

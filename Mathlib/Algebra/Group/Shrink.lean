@@ -23,7 +23,7 @@ namespace Shrink
 @[to_additive] instance [One α] : One (Shrink.{v} α) := (equivShrink α).symm.one
 @[to_additive] instance [Mul α] : Mul (Shrink.{v} α) := (equivShrink α).symm.mul
 @[to_additive] instance [Div α] : Div (Shrink.{v} α) := (equivShrink α).symm.div
-@[to_additive] instance [Inv α] : Inv (Shrink.{v} α) := (equivShrink α).symm.Inv
+@[to_additive] instance [Inv α] : Inv (Shrink.{v} α) := (equivShrink α).symm.inv
 @[to_additive] instance [Pow α M] : Pow (Shrink.{v} α) M := (equivShrink α).symm.pow M
 
 end Shrink

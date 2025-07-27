@@ -173,7 +173,7 @@ end Semigroup
 /-- A commutative additive magma is a type with an addition which commutes. -/
 @[ext]
 class AddCommMagma (G : Type u) extends Add G where
-  /-- Addition is commutative in an commutative additive magma. -/
+  /-- Addition is commutative in a commutative additive magma. -/
   protected add_comm : ∀ a b : G, a + b = b + a
 
 /-- A commutative multiplicative magma is a type with a multiplication which commutes. -/
@@ -1213,3 +1213,4 @@ initialize_simps_projections Group
 initialize_simps_projections AddGroup
 initialize_simps_projections CommGroup
 initialize_simps_projections AddCommGroup
+

@@ -234,7 +234,7 @@ end MulOpposite
 
 namespace AddOpposite
 
-instance instSemigroup [Semigroup α] : Semigroup αᵃᵒᵖ := unop_injective.semigroup _ fun _ _ ↦ rfl
+instance instSemigroup [Semigroup α] : Semigroup αᵃᵒᵖ := unop_injective.semigroup _ fun _ _ => rfl
 
 instance instLeftCancelSemigroup [LeftCancelSemigroup α] : LeftCancelSemigroup αᵃᵒᵖ :=
   unop_injective.leftCancelSemigroup _ fun _ _ => rfl

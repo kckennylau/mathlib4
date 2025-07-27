@@ -51,8 +51,8 @@ instance instAddCommGroup : AddCommGroup ℤ where
 /-!
 ### Extra instances to short-circuit type class resolution
 
-These also prevent non-computable instances like `Int.instNormedCommRing` being used to construct
-these instances non-computably.
+These also prevent noncomputable instances like `Int.instNormedCommRing` being used to construct
+these instances noncomputably.
 -/
 
 set_option linter.style.commandStart false
@@ -78,3 +78,4 @@ end Int
 lemma zsmul_int_int (a b : ℤ) : a • b = a * b := rfl
 
 lemma zsmul_int_one (n : ℤ) : n • (1 : ℤ) = n := mul_one _
+

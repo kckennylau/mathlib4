@@ -12,7 +12,7 @@ import Mathlib.Algebra.Group.Hom.Defs
 # Propositional typeclasses on several monoid homs
 
 This file contains typeclasses used in the definition of equivariant maps,
-in the spirit what was initially developed by Frédéric Dupuis and Heather Macbeth for linear maps.
+in the spirit of what was initially developed by Frédéric Dupuis and Heather Macbeth for linear maps.
 However, we do not expect that all maps should be guessed automatically,
 as it happens for linear maps.
 

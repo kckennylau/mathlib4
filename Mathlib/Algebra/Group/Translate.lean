@@ -91,3 +91,4 @@ variable [CommMonoid M]
 
 lemma translate_prod_right (a : G) (f : ι → G → M) (s : Finset ι) :
     τ a (∏ i ∈ s, f i) = ∏ i ∈ s, τ a (f i) := by ext; simp
+

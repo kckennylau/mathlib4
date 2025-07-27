@@ -9,7 +9,7 @@ import Mathlib.Data.Sigma.Basic
 /-!
 # Sigma instances for additive and multiplicative actions
 
-This file defines instances for arbitrary sum of additive and multiplicative actions.
+This file defines instances for arbitrary sums of additive and multiplicative actions.
 
 ## See also
 

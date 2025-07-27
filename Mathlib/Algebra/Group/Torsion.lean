@@ -10,7 +10,7 @@ import Mathlib.Tactic.MkIffOfInductiveProp
 # Torsion-free monoids and groups
 
 This file defines torsion-free monoids as those monoids `M` for which `n • · : M → M` is injective
-for all non-zero natural number `n`.
+for all non-zero natural numbers `n`.
 
 ## TODO
 
@@ -74,3 +74,4 @@ lemma zpow_left_inj (hn : n ≠ 0) : a ^ n = b ^ n ↔ a = b := (zpow_left_injec
 lemma zpow_eq_zpow_iff' (hn : n ≠ 0) : a ^ n = b ^ n ↔ a = b := zpow_left_inj hn
 
 end Group
+

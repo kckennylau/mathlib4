@@ -97,7 +97,7 @@ In lemma names this is still called `op_vadd`. -/
 scoped notation3:73 m:73 " <+ᵥ " r:74 => AddOpposite.op r +ᵥ m
 
 section examples
-variable [SMul α β] [SMul αᵐᵒᵖ β] [VAdd α β] [VAdd αᵃᵒᵖ β] {a a₁ a₂ a₃ a₄ : α} {b : β}
+variable [SMul α β] [SMul αᵐᵒᵖ β] [VAdd α β] [VAdd αᵐᵒᵖ β] {a a₁ a₂ a₃ a₄ : α} {b : β}
 
 -- Left and right actions are just notation around the general `•` and `+ᵥ` notations
 example : a •> b = a • b := rfl
@@ -175,3 +175,4 @@ instance SMulCommClass.opposite_mid {M N} [Mul N] [SMul M N] [IsScalarTower M N 
 -- `MulAction αᵐᵒᵖ αᵐᵒᵖ` are defeq.
 example [Monoid α] : Monoid.toMulAction αᵐᵒᵖ = MulOpposite.instMulAction := by
   with_reducible_and_instances rfl
+

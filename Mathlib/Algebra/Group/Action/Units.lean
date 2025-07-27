@@ -115,3 +115,4 @@ lemma IsUnit.smul [Group G] [Monoid M] [MulAction G M] [SMulCommClass G M M] [Is
     {m : M} (g : G) (h : IsUnit m) : IsUnit (g • m) :=
   let ⟨u, hu⟩ := h
   hu ▸ ⟨g • u, Units.val_smul _ _⟩
+

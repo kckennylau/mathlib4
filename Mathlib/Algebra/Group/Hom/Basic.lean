@@ -12,7 +12,7 @@ import Mathlib.Algebra.Group.Hom.Defs
 
 -/
 
--- `NeZero` cannot be additivised, hence its theory should be developed outside of the
+-- `NeZero` cannot be additivized, hence its theory should be developed outside of the
 -- `Algebra.Group` folder.
 assert_not_imported Mathlib.Algebra.NeZero
 

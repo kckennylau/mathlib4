@@ -20,7 +20,7 @@ section LeftOrRightCancelSemigroup
 embedding. -/
 @[to_additive (attr := simps)
       "If left-addition by any element is cancellative, left-addition by `g` is an
-        embedding."]
+embedding."]
 def mulLeftEmbedding [Mul G] [IsLeftCancelMul G] (g : G) : G ↪ G where
   toFun h := g * h
   inj' := mul_right_injective g
@@ -29,7 +29,7 @@ def mulLeftEmbedding [Mul G] [IsLeftCancelMul G] (g : G) : G ↪ G where
 embedding. -/
 @[to_additive (attr := simps)
       "If right-addition by any element is cancellative, right-addition by `g` is an
-        embedding."]
+embedding."]
 def mulRightEmbedding [Mul G] [IsRightCancelMul G] (g : G) : G ↪ G where
   toFun h := h * g
   inj' := mul_left_injective g

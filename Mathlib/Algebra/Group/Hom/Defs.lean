@@ -198,7 +198,7 @@ library_note "hom simp lemma priority"
 The hom class hierarchy allows for a single lemma, such as `map_one`, to apply to a large variety
 of morphism types, so long as they have an instance of `OneHomClass`. For example, this applies to
 to `MonoidHom`, `RingHom`, `AlgHom`, `StarAlgHom`, as well as their `Equiv` variants, etc. However,
-precisely because these lemmas are so widely applicable, they keys in the `simp` discrimination tree
+precisely because these lemmas are so widely applicable, the keys in the `simp` discrimination tree
 are necessarily highly non-specific. For example, the key for `map_one` is
 `@DFunLike.coe _ _ _ _ _ 1`.
 
@@ -208,7 +208,7 @@ the entirety of the `FunLike` hierarchy in order to determine this because so ma
 `OneHomClass` instance (in fact, this problem is likely worse for `ZeroHomClass`). This can lead to
 a significant performance hit when `map_one` fails to apply.
 
-To avoid this problem, we mark these widely applicable simp lemmas with key discimination tree keys
+To avoid this problem, we mark these widely applicable simp lemmas with key discrimination tree keys
 with `mid` priority in order to ensure that they are not tried first.
 
 We do not use `low`, to allow bundled morphisms to unfold themselves with `low` priority such that

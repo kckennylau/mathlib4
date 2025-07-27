@@ -11,7 +11,7 @@ import Mathlib.Algebra.GCDMonoid.Multiset
 
 ## Main definitions
 
-- `Finset.gcd` - the greatest common denominator of a `Finset` of elements of a `GCDMonoid`
+- `Finset.gcd` - the greatest common divisor of a `Finset` of elements of a `GCDMonoid`
 - `Finset.lcm` - the least common multiple of a `Finset` of elements of a `GCDMonoid`
 
 ## Implementation notes

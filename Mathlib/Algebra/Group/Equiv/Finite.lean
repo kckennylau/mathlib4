@@ -7,7 +7,7 @@ import Mathlib.Algebra.Group.Equiv.Defs
 import Mathlib.Data.Fintype.Defs
 
 /-!
-# Finite types with addition/multiplications
+# Finite types with addition/multiplication
 
 This file contains basic results and instances for finite types that have an
 addition/multiplication operator.

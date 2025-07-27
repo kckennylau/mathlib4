@@ -571,3 +571,4 @@ def MonoidHom.toMulEquiv [MulOneClass M] [MulOneClass N] (f : M →* N) (g : N �
   left_inv := DFunLike.congr_fun h₁
   right_inv := DFunLike.congr_fun h₂
   map_mul' := f.map_mul
+

@@ -9,7 +9,7 @@ import Mathlib.Algebra.Ring.PUnit
 /-!
 # `PUnit` is a GCD monoid
 
-This file collects facts about algebraic structures on the one-element type, e.g. that it is has a
+This file collects facts about algebraic structures on the one-element type, e.g. that it has a
 GCD.
 -/
 

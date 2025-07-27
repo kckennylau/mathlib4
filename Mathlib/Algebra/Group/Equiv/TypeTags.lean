@@ -88,7 +88,7 @@ def AddEquiv.toMultiplicative'' [AddZeroClass G] [MulOneClass H] :
     right_inv := f.right_inv
     map_add' := map_mul f }
 
-/-- Reinterpret `Multiplicative G ≃* H` as `G ≃+ Additive H` as. -/
+/-- Reinterpret `Multiplicative G ≃* H` as `G ≃+ Additive H`. -/
 abbrev MulEquiv.toAdditive'' [AddZeroClass G] [MulOneClass H] :
     Multiplicative G ≃* H ≃ (G ≃+ Additive H) :=
   AddEquiv.toMultiplicative''.symm
@@ -99,7 +99,7 @@ def MulEquiv.toMultiplicative_toAdditive [MulOneClass G] :
     Multiplicative (Additive G) ≃* G :=
   AddEquiv.toMultiplicative'' <| MulEquiv.toAdditive (.refl _)
 
-/-- The additive version of an multiplicativized additive monoid is add-equivalent to itself. -/
+/-- The additive version of a multiplicativized additive monoid is add-equivalent to itself. -/
 @[simps! apply symm_apply]
 def AddEquiv.toAdditive_toMultiplicative [AddZeroClass G] :
     Additive (Multiplicative G) ≃+ G :=

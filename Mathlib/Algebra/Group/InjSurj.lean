@@ -61,7 +61,7 @@ protected abbrev commMagma [CommMagma M₂] (f : M₁ → M₂) (hf : Injective 
 /-- A type endowed with `*` is a commutative semigroup, if it admits an injective map that
 preserves `*` to a commutative semigroup.  See note [reducible non-instances]. -/
 @[to_additive
-"A type endowed with `+` is an additive commutative semigroup,if it admits
+"A type endowed with `+` is an additive commutative semigroup, if it admits
 an injective map that preserves `+` to an additive commutative semigroup."]
 protected abbrev commSemigroup [CommSemigroup M₂] (f : M₁ → M₂) (hf : Injective f)
     (mul : ∀ x y, f (x * y) = f x * f y) : CommSemigroup M₁ where
@@ -151,7 +151,7 @@ protected abbrev leftCancelMonoid [LeftCancelMonoid M₂] (f : M₁ → M₂) (h
 /-- A type endowed with `1` and `*` is a right cancel monoid, if it admits an injective map that
 preserves `1` and `*` to a right cancel monoid. See note [reducible non-instances]. -/
 @[to_additive
-"A type endowed with `0` and `+` is an additive left cancel monoid,if it
+"A type endowed with `0` and `+` is an additive left cancel monoid, if it
 admits an injective map that preserves `0` and `+` to an additive left cancel monoid."]
 protected abbrev rightCancelMonoid [RightCancelMonoid M₂] (f : M₁ → M₂) (hf : Injective f)
     (one : f 1 = 1) (mul : ∀ x y, f (x * y) = f x * f y)
@@ -161,7 +161,7 @@ protected abbrev rightCancelMonoid [RightCancelMonoid M₂] (f : M₁ → M₂) 
 /-- A type endowed with `1` and `*` is a cancel monoid, if it admits an injective map that preserves
 `1` and `*` to a cancel monoid. See note [reducible non-instances]. -/
 @[to_additive
-"A type endowed with `0` and `+` is an additive left cancel monoid,if it
+"A type endowed with `0` and `+` is an additive left cancel monoid, if it
 admits an injective map that preserves `0` and `+` to an additive left cancel monoid."]
 protected abbrev cancelMonoid [CancelMonoid M₂] (f : M₁ → M₂) (hf : Injective f) (one : f 1 = 1)
     (mul : ∀ x y, f (x * y) = f x * f y) (npow : ∀ (x) (n : ℕ), f (x ^ n) = f x ^ n) :

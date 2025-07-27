@@ -49,7 +49,7 @@ def ofUnique {M N} [Unique M] [Unique N] [Mul M] [Mul N] : M ≃* N :=
 @[to_additive (attr := deprecated ofUnique (since := "2024-12-25"))]
 alias mulEquivOfUnique := ofUnique
 
-/-- Alias of `AddEquiv.ofEquiv`. -/
+/-- Alias of `AddEquiv.ofUnique`. -/
 add_decl_doc AddEquiv.addEquivOfUnique
 
 /-- There is a unique monoid homomorphism between two monoids with a unique element. -/
