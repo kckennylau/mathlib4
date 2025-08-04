@@ -24,7 +24,7 @@ This file contains basic results on Fourier series for functions on the additive
 
 * `haarAddCircle`, Haar measure on `AddCircle T`, normalized to have total measure `1`.
   Note that this is not the same normalisation
-  as the standard measure defined in `IntervalIntegral.Periodic`,
+  as the standard measure defined in `Mathlib/MeasureTheory/Integral/IntervalIntegral/Periodic.lean,
   so we do not declare it as a `MeasureSpace` instance, to avoid confusion.
 * for `n : ℤ`, `fourier n` is the monomial `fun x => exp (2 π i n x / T)`,
   bundled as a continuous map from `AddCircle T` to `ℂ`.

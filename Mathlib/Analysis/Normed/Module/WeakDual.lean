@@ -61,7 +61,7 @@ No new notation is introduced.
 
 ## Implementation notes
 
-Weak-* topology is defined generally in the file `Topology.Algebra.Module.WeakDual`.
+Weak-* topology is defined generally in the file `Mathlib/Topology/Algebra/Module/WeakDual.lean.
 
 When `E` is a normed space, the duals `Dual 𝕜 E` and `WeakDual 𝕜 E` are type synonyms with
 different topology instances.

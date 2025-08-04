@@ -31,7 +31,7 @@ The strongest typeclass provided on each interval is:
 * algebraic instances for `(Ioo (-1) 1)ᶜ`
 * provide `distribNeg` instances where applicable
 * prove versions of `mul_le_{left,right}` for other intervals
-* prove versions of the lemmas in `Topology/UnitInterval` with `ℝ` generalized to
+* prove versions of the lemmas in `Mathlib/Topology/UnitInterval.lean with `ℝ` generalized to
   some arbitrary ordered semiring
 -/
 

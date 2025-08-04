@@ -16,7 +16,7 @@ import Mathlib.LinearAlgebra.Prod
 We define `starLinearEquiv`, which is the star operation bundled as a star-linear map.
 It is defined on a star algebra `A` over the base ring `R`.
 
-This file also provides some lemmas that need `Algebra.Module.Basic` imported to prove.
+This file also provides some lemmas that need `Mathlib/Algebra/Module/Basic.lean` imported to prove.
 
 ## TODO
 

@@ -335,7 +335,7 @@ theorem coe_inverse' (f : A →ₛₙₐ[φ] B) (g : B → A)
 
 /-! ### Operations on the product type
 
-Note that much of this is copied from [`LinearAlgebra/Prod`](../../LinearAlgebra/Prod). -/
+Note that much of this is copied from [`Mathlib/LinearAlgebra/Prod.lean](../../LinearAlgebra/Prod). -/
 
 
 section Prod

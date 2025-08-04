@@ -9,7 +9,7 @@ import Mathlib.AlgebraicTopology.SimplicialSet.StrictSegal
 /-!
 # Strict Segal simplicial sets are quasicategories
 
-In `AlgebraicTopology.SimplicialSet.StrictSegal`, we define the strict Segal
+In `Mathlib/AlgebraicTopology/SimplicialSet/StrictSegal.lean, we define the strict Segal
 condition on a simplicial set `X`. We say that `X` is strict Segal if its
 simplices are uniquely determined by their spine.
 

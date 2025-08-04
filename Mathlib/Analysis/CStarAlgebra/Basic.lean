@@ -22,7 +22,7 @@ condition `‖x‖^2 ≤ ‖x⋆ * x‖` for all `x` (which actually implies equ
 a star algebra, then it is a C⋆-algebra.
 
 Note that the type classes corresponding to C⋆-algebras are defined in
-`Mathlib/Analysis/CStarAlgebra/Classes`.
+`Mathlib/Analysis/CStarAlgebra/Classes.lean.
 
 ## TODO
 

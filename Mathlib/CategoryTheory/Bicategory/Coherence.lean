@@ -56,7 +56,7 @@ def inclusionPathAux {a : B} : ∀ {b : B}, Path a b → Hom a b
   | _, cons p f => (inclusionPathAux p).comp (Hom.of f)
 
 /- Porting note: Since the following instance was removed when porting
-`CategoryTheory.Bicategory.Free`, we add it locally here. -/
+`Mathlib/CategoryTheory/Bicategory/Free.lean, we add it locally here. -/
 /-- Category structure on `Hom a b`. In this file, we will use `Hom a b` for `a b : B`
 (precisely, `FreeBicategory.Hom a b`) instead of the definitionally equal expression
 `a ⟶ b` for `a b : FreeBicategory B`. The main reason is that we have to annoyingly write

@@ -12,7 +12,7 @@ import Mathlib.AlgebraicGeometry.Morphisms.UnderlyingMap
 A morphism is an open immersion if the underlying map of spaces is an open embedding
 `f : X ⟶ U ⊆ Y`, and the sheaf map `Y(V) ⟶ f _* X(V)` is an iso for each `V ⊆ U`.
 
-Most of the theories are developed in `AlgebraicGeometry/OpenImmersion`, and we provide the
+Most of the theories are developed in `Mathlib/AlgebraicGeometry/OpenImmersion.lean, and we provide the
 remaining theorems analogous to other lemmas in `AlgebraicGeometry/Morphisms/*`.
 
 -/

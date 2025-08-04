@@ -11,7 +11,7 @@ import Mathlib.LinearAlgebra.SesquilinearForm
 
 In this file, the `orthogonal` complement of a submodule `K` is defined, and basic API established.
 Some of the more subtle results about the orthogonal complement are delayed to
-`Analysis.InnerProductSpace.Projection`.
+`Mathlib/Analysis/InnerProductSpace/Projection.lean.
 
 See also `BilinForm.orthogonal` for orthogonality with respect to a general bilinear form.
 

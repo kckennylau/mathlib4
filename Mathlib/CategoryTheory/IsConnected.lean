@@ -38,7 +38,7 @@ We give some equivalent definitions:
 
 We also prove the result that the functor given by `(X × -)` preserves any
 connected limit. That is, any limit of shape `J` where `J` is a connected
-category is preserved by the functor `(X × -)`. This appears in `CategoryTheory.Limits.Connected`.
+category is preserved by the functor `(X × -)`. This appears in `Mathlib/CategoryTheory/Limits/Connected.lean.
 -/
 
 

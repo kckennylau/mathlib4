@@ -12,7 +12,7 @@ import Mathlib.Algebra.FreeAlgebra
 Reversing words gives a *-structure on the free monoid or on the free algebra on a type.
 
 ## Implementation note
-We have this in a separate file, rather than in `Algebra.FreeMonoid` and `Algebra.FreeAlgebra`,
+We have this in a separate file, rather than in `Algebra.FreeMonoid` and `Mathlib/Algebra/FreeAlgebra.lean,
 to avoid importing `Mathlib/Algebra/Star/Basic.lean` into the entire hierarchy.
 -/
 

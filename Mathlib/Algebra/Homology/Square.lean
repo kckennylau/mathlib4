@@ -9,7 +9,7 @@ import Mathlib.CategoryTheory.Limits.Shapes.Pullback.Square
 /-!
 # Relation between pullback/pushout squares and kernel/cokernel sequences
 
-This file is the bundled counterpart of `Algebra.Homology.CommSq`.
+This file is the bundled counterpart of `Mathlib/Algebra/Homology/CommSq.lean.
 The same results are obtained here for squares `sq : Square C` where
 `C` is an additive category.
 

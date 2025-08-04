@@ -10,7 +10,7 @@ import Mathlib.Algebra.Group.Hom.Defs
 
 In this file we prove extensionality lemmas for `Monoid` and higher algebraic structures with one
 binary operation. Extensionality lemmas for structures that are lower in the hierarchy can be found
-in `Algebra.Group.Defs`.
+in `Mathlib/Algebra/Group/Defs.lean`.
 
 ## Implementation details
 

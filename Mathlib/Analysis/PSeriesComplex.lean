@@ -12,7 +12,7 @@ import Mathlib.Data.Complex.FiniteDimensional
 # Convergence of `p`-series (complex case)
 
 Here we show convergence of `∑ n : ℕ, 1 / n ^ p` for complex `p`. This is done in a separate file
-rather than in `Analysis.PSeries` in order to keep the prerequisites of the former relatively light.
+rather than in `Mathlib/Analysis/PSeries.lean in order to keep the prerequisites of the former relatively light.
 
 ## Tags
 

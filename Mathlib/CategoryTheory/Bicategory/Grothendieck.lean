@@ -27,7 +27,7 @@ The projection functor `∫ F ⥤ 𝒮` is then given by projecting to the first
 
 1. Once the bicategory of pseudofunctors has been defined, show that this construction forms a
 pseudofunctor from `Pseudofunctor (LocallyDiscrete 𝒮ᵒᵖ) Cat` to `Cat`.
-2. One could probably deduce the results in `CategoryTheory.Grothendieck` as a specialization of the
+2. One could probably deduce the results in `Mathlib/CategoryTheory/Grothendieck.lean as a specialization of the
 results in this file.
 
 ## References

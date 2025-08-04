@@ -26,9 +26,9 @@ is a localization functor with respect to the class of morphisms
 consists of morphisms whose cone belongs to the triangulated subcategory
 `HomotopyCategory.subcategoryAcyclic C` of acyclic complexes. Then, the triangulated
 structure on `DerivedCategory C` is deduced from the triangulated structure
-on the homotopy category (see file `Algebra.Homology.HomotopyCategory.Triangulated`)
+on the homotopy category (see file `Mathlib/Algebra/Homology/HomotopyCategory/Triangulated.lean)
 using the localization theorem for triangulated categories which was obtained
-in the file `CategoryTheory.Localization.Triangulated`.
+in the file `Mathlib/CategoryTheory/Localization/Triangulated.lean.
 
 ## Implementation notes
 
@@ -49,7 +49,7 @@ instance should be obtained at the beginning of the proof, using the term
 
 - construct the distinguished triangle associated to a short exact sequence
 of cochain complexes (done), and compare the associated connecting homomorphism
-with the one defined in `Algebra.Homology.HomologySequence`.
+with the one defined in `Mathlib/Algebra/Homology/HomologySequence.lean.
 
 ## References
 * [Jean-Louis Verdier, *Des catégories dérivées des catégories abéliennes*][verdier1996]

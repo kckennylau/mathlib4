@@ -21,8 +21,8 @@ We construct the subscheme associated to an ideal sheaf.
 
 ## Note
 
-Some instances are in `Mathlib/AlgebraicGeometry/Morphisms/ClosedImmersion` and
-`Mathlib/AlgebraicGeometry/Morphisms/Separated` because they need more API to prove.
+Some instances are in `Mathlib/AlgebraicGeometry/Morphisms/ClosedImmersion.lean and
+`Mathlib/AlgebraicGeometry/Morphisms/Separated.lean because they need more API to prove.
 
 -/
 
@@ -453,7 +453,7 @@ lemma subschemeι_apply (x : I.subscheme) : I.subschemeι.base x = x.1 := rfl
 private lemma subschemeι_def : I.subschemeι = I.subschemeIso.hom ≫ I.gluedTo :=
   Scheme.Hom.copyBase_eq _ _ _
 
-/-- See `AlgebraicGeometry.Morphisms.ClosedImmersion` for the closed immersion version. -/
+/-- See `Mathlib/AlgebraicGeometry/Morphisms/ClosedImmersion.lean for the closed immersion version. -/
 instance : IsPreimmersion I.subschemeι := by
   rw [subschemeι_def]
   infer_instance

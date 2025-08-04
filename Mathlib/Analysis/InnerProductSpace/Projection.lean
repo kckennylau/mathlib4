@@ -27,7 +27,7 @@ Basic API for `orthogonalProjection` and `reflection` is developed.
 
 Next, the orthogonal projection is used to prove a series of more subtle lemmas about the
 orthogonal complement of complete subspaces of `E` (the orthogonal complement itself was
-defined in `Analysis.InnerProductSpace.Orthogonal`); the lemma
+defined in `Mathlib/Analysis/InnerProductSpace/Orthogonal.lean); the lemma
 `Submodule.sup_orthogonal_of_hasOrthogonalProjection`,
 stating that for a subspace `K` of `E` such that `K` admits an orthogonal projection we have
 `K ⊔ Kᗮ = ⊤`, is a typical example.

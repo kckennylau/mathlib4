@@ -12,7 +12,7 @@ import Mathlib.CategoryTheory.Limits.Shapes.Equivalence
 # Limits and the category of (co)cones
 
 This files contains results that stem from the limit API. For the definition and the category
-instance of `Cone`, please refer to `CategoryTheory/Limits/Cones.lean`.
+instance of `Cone`, please refer to `Mathlib/CategoryTheory/Limits/Cones.lean.
 
 ## Main results
 * The category of cones on `F : J ⥤ C` is equivalent to the category

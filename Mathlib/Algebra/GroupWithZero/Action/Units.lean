@@ -19,9 +19,9 @@ admits a `MulDistribMulAction G Mˣ` structure, again with the obvious definitio
 
 ## See also
 
-* `Algebra.GroupWithZero.Action.Opposite`
-* `Algebra.GroupWithZero.Action.Pi`
-* `Algebra.GroupWithZero.Action.Prod`
+* `Mathlib/Algebra/GroupWithZero/Action/Opposite.lean
+* `Mathlib/Algebra/GroupWithZero/Action/Pi.lean
+* `Mathlib/Algebra/GroupWithZero/Action/Prod.lean
 -/
 
 assert_not_exists Ring

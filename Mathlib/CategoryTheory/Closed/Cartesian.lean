@@ -67,7 +67,7 @@ We define this as `MonoidalClosed` with respect to the cartesian monoidal struct
 abbrev CartesianClosed := MonoidalClosed C
 
 variable (C) in
--- Porting note: added to ease the port of `CategoryTheory.Closed.Types`
+-- Porting note: added to ease the port of `Mathlib/CategoryTheory/Closed/Types.lean
 /-- Constructor for `CartesianClosed C`. -/
 def CartesianClosed.mk (exp : ∀ (X : C), Exponentiable X) : CartesianClosed C where
   closed X := exp X

@@ -17,7 +17,7 @@ or to specify that a field has characteristic `≠ 2`.
 It is the `Type`-valued analogue to the `Prop`-valued `IsUnit`.
 
 For constructions of the invertible element given a characteristic, see
-`Algebra/CharP/Invertible` and other lemmas in that file.
+`Mathlib/Algebra/CharP/Invertible.lean and other lemmas in that file.
 
 ## Notation
 

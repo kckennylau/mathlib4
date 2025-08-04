@@ -14,10 +14,10 @@ involved are abelian, or more generally, finitely (co)complete.
 
 ## Related results
 * `CategoryTheory.Limits.preservesFiniteLimitsOfPreservesEqualizersAndFiniteProducts` :
-  see `CategoryTheory/Limits/Constructions/LimitsOfProductsAndEqualizers.lean`. Also provides
+  see `Mathlib/CategoryTheory/Limits/Constructions/LimitsOfProductsAndEqualizers.lean. Also provides
   the dual version.
 * `CategoryTheory.Limits.preservesFiniteLimitsIffFlat` :
-  see `CategoryTheory/Functor/Flat.lean`.
+  see `Mathlib/CategoryTheory/Functor/Flat.lean.
 
 -/
 

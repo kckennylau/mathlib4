@@ -9,7 +9,7 @@ import Mathlib.CategoryTheory.Filtered.Basic
 /-!
 # Preservation of filtered colimits and cofiltered limits.
 Typically forgetful functors from algebraic categories preserve filtered colimits
-(although not general colimits). See e.g. `Algebra/Category/MonCat/FilteredColimits`.
+(although not general colimits). See e.g. `Mathlib/Algebra/Category/MonCat/FilteredColimits.lean.
 
 -/
 

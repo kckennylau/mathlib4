@@ -19,7 +19,7 @@ The main result is that `K.ιTruncLE e : K.truncLE e ⟶ K` induces a
 quasi-isomorphism in degree `e.f i` for all `i`. (Note that the complex
 `K.truncLE e` is exact in degrees that are not in the image of `e.f`.)
 
-All the results are obtained by dualising the results in the file `Embedding.TruncGEHomology`.
+All the results are obtained by dualising the results in the file `Mathlib/Algebra/Homology/Embedding/TruncGEHomology.lean.
 
 Moreover, if `C` is an abelian category, we introduce the cokernel
 sequence `K.shortComplexTruncLE e` of the monomorphism `K.ιTruncLE e`.

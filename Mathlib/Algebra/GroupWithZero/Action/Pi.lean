@@ -16,9 +16,9 @@ This file defines instances for `MulActionWithZero` and related structures on `P
 
 ## See also
 
-* `Algebra.GroupWithZero.Action.Opposite`
-* `Algebra.GroupWithZero.Action.Prod`
-* `Algebra.GroupWithZero.Action.Units`
+* `Mathlib/Algebra/GroupWithZero/Action/Opposite.lean
+* `Mathlib/Algebra/GroupWithZero/Action/Prod.lean
+* `Mathlib/Algebra/GroupWithZero/Action/Units.lean
 -/
 
 assert_not_exists Ring

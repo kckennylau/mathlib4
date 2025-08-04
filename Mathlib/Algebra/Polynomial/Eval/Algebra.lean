@@ -11,7 +11,7 @@ import Mathlib.Algebra.Polynomial.Eval.Defs
 
 This file concerns evaluating polynomials where the map is `algebraMap`
 
-TODO: merge with parts of `Algebra/Polynomial/AlgebraMap.lean`?
+TODO: merge with parts of `Mathlib/Algebra/Polynomial/AlgebraMap.lean?
 -/
 
 noncomputable section

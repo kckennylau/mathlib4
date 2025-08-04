@@ -46,7 +46,7 @@ example : UniqueProds ℕ+ := inferInstance
 `UniqueProds/Sums` allow to decouple certain arguments about `(Add)MonoidAlgebra`s into an argument
 about the grading type and then a generic statement of the form "look at the coefficient of the
 'unique product/sum'".
-The file `Algebra/MonoidAlgebra/NoZeroDivisors` contains several examples of this use.
+The file `Mathlib/Algebra/MonoidAlgebra/NoZeroDivisors.lean contains several examples of this use.
 -/
 
 assert_not_exists Cardinal Subsemiring Algebra Submodule StarModule FreeMonoid OrderedCommMonoid

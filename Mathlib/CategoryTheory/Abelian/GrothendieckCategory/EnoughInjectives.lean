@@ -19,7 +19,7 @@ Let `C` be a Grothendieck abelian category. In this file, we formalize
 the theorem by Grothendieck that `C` has enough injectives.
 
 We recall that injective objects can be characterized in terms of
-lifting properties (see the file `Preadditive.Injective.LiftingProperties`):
+lifting properties (see the file `Mathlib/CategoryTheory/Preadditive/Injective/LiftingProperties.lean):
 an object `I : C` is injective iff the morphism `I ⟶ 0` has the right lifting
 property with respect to all monomorphisms.
 
@@ -51,7 +51,7 @@ Here, we split the argument into two separate facts:
 * any monomorphism `A ⟶ B` is a transfinite composition of pushouts of monomorphisms in
   `generatingMonomorphisms G` (see `generatingMonomorphisms.exists_transfiniteCompositionOfShape`);
 * the class of morphisms that have the left lifting property with respect to `p` is stable under
-  transfinite composition (see the file `SmallObject.TransfiniteCompositionLifting`).
+  transfinite composition (see the file `Mathlib/CategoryTheory/SmallObject/TransfiniteCompositionLifting.lean).
 
 ## References
 

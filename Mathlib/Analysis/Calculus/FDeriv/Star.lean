@@ -14,7 +14,7 @@ import Mathlib.Topology.Algebra.Module.Star
 
 This file contains the usual formulas (and existence assertions) for the Fréchet derivative of the
 star operation. For detailed documentation of the Fréchet derivative, see the module docstring of
-`Analysis/Calculus/FDeriv/Basic.lean`.
+`Mathlib/Analysis/Calculus/FDeriv/Basic.lean.
 
 Most of the results in this file only apply when the field that the derivative is respect to has a
 trivial star operation; which as should be expected rules out `𝕜 = ℂ`. The exceptions are

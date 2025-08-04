@@ -12,7 +12,7 @@ import Mathlib.Tactic.Spread
 /-!
 # Instances and theorems on pi types
 
-This file provides instances for the typeclass defined in `Algebra.Group.Defs`. More sophisticated
+This file provides instances for the typeclass defined in `Mathlib/Algebra/Group/Defs.lean`. More sophisticated
 instances are defined in `Mathlib/Algebra/Group/Pi/Lemmas.lean` files elsewhere.
 
 ## Porting note
@@ -23,7 +23,7 @@ comment `--pi_instance` is inserted before all fields which were previously deri
 [https://leanprover.zulipchat.com/#narrow/stream/287929-mathlib4/topic/not.20porting.20pi_instance]
 -/
 
--- We enforce to only import `Algebra.Group.Defs` and basic logic
+-- We enforce to only import `Mathlib/Algebra/Group/Defs.lean` and basic logic
 assert_not_exists Set.range MonoidHom MonoidWithZero DenselyOrdered
 
 universe u v₁ v₂ v₃

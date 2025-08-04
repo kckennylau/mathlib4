@@ -19,7 +19,7 @@ This file proves the (general) adjoint functor theorem, in the form:
 
 We show that the converse holds, i.e. that if `G` has a left adjoint then it satisfies the solution
 set condition, see `solutionSetCondition_of_isRightAdjoint`
-(the file `CategoryTheory/Adjunction/Limits` already shows it preserves limits).
+(the file `Mathlib/CategoryTheory/Adjunction/Limits.lean already shows it preserves limits).
 
 We define the *solution set condition* for the functor `G : D ⥤ C` to mean, for every object
 `A : C`, there is a set-indexed family ${f_i : A ⟶ G (B_i)}$ such that any morphism `A ⟶ G X`

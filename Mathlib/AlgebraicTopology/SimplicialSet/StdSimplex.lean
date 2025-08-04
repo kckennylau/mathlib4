@@ -13,7 +13,7 @@ import Mathlib.Order.Fin.SuccAboveOrderIso
 # The standard simplex
 
 We define the standard simplices `Δ[n]` as simplicial sets.
-See files `SimplicialSet.Boundary` and `SimplicialSet.Horn`
+See files `Mathlib/AlgebraicTopology/SimplicialSet/Boundary.lean and `Mathlib/AlgebraicTopology/SimplicialSet/Horn.lean
 for their boundaries`∂Δ[n]` and horns `Λ[n, i]`.
 (The notations are available via `open Simplicial`.)
 

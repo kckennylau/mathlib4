@@ -17,7 +17,7 @@ import Mathlib.Algebra.Ring.GrindInstances
 # Characteristic of semirings
 
 This file collects some fundamental results on the characteristic of rings that don't need the extra
-imports of `CharP/Lemmas.lean`.
+imports of `Mathlib/Algebra/CharP/Lemmas.lean.
 
 As such, we can probably reorganize and find a better home for most of these lemmas.
 -/

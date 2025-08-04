@@ -11,7 +11,7 @@ import Mathlib.Algebra.Group.WithOne.Defs
 # More operations on `WithOne` and `WithZero`
 
 This file defines various bundled morphisms on `WithOne` and `WithZero`
-that were not available in `Algebra/Group/WithOne/Defs`.
+that were not available in `Mathlib/Algebra/Group/WithOne/Defs.lean.
 
 ## Main definitions
 

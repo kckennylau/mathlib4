@@ -35,11 +35,11 @@ is defined in the file `Mathlib/Algebra/Homology/Embedding/Restriction.lean`;
 - the stupid truncation functor
 `e.stupidTruncFunctor C : HomologicalComplex C c' ⥤ HomologicalComplex C c'`
 which is the composition of the two previous functors is defined in the file
-`Embedding.StupidTrunc`.
+`Mathlib/Algebra/Homology/Embedding/StupidTrunc.lean.
 - assuming `e.IsTruncGE`, we have truncation functors
 `e.truncGE'Functor C : HomologicalComplex C c' ⥤ HomologicalComplex C c` and
 `e.truncGEFunctor C : HomologicalComplex C c' ⥤ HomologicalComplex C c'`
-(see the file `Embedding.TruncGE`), and a natural
+(see the file `Mathlib/Algebra/Homology/Embedding/TruncGE.lean), and a natural
 transformation `e.πTruncGENatTrans : 𝟭 _ ⟶ e.truncGEFunctor C` which is a quasi-isomorphism
 in degrees in the image of `e.f` (TODO);
 - assuming `e.IsTruncLE`, we have truncation functors

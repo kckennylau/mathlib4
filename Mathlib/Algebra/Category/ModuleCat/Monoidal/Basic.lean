@@ -13,7 +13,7 @@ import Mathlib.CategoryTheory.Monoidal.Linear
 Mostly this uses existing machinery in `LinearAlgebra.TensorProduct`.
 We just need to provide a few small missing pieces to build the
 `MonoidalCategory` instance.
-The `SymmetricCategory` instance is in `Algebra.Category.ModuleCat.Monoidal.Symmetric`
+The `SymmetricCategory` instance is in `Mathlib/Algebra/Category/ModuleCat/Monoidal/Symmetric.lean
 to reduce imports.
 
 Note the universe level of the modules must be at least the universe level of the ring,
@@ -21,7 +21,7 @@ so that we have a monoidal unit.
 For now, we simplify by insisting both universe levels are the same.
 
 We construct the monoidal closed structure on `ModuleCat R` in
-`Algebra.Category.ModuleCat.Monoidal.Closed`.
+`Mathlib/Algebra/Category/ModuleCat/Monoidal/Closed.lean.
 
 If you're happy using the bundled `ModuleCat R`, it may be possible to mostly
 use this as an interface and not need to interact much with the implementation details.

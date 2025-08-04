@@ -83,7 +83,7 @@ for Fréchet derivatives.
 
 The strategy to construct simp lemmas that give the simplifier the possibility to compute
 derivatives is the same as the one for differentiability statements, as explained in
-`FDeriv/Basic.lean`. See the explanations there.
+`Mathlib/Analysis/Calculus/FDeriv/Basic.lean. See the explanations there.
 -/
 
 universe u v w

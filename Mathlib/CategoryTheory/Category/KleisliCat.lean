@@ -10,7 +10,7 @@ import Mathlib.CategoryTheory.Category.Basic
 # The Kleisli construction on the Type category
 
 Define the Kleisli category for (control) monads.
-`CategoryTheory/Monad/Kleisli` defines the general version for a monad on `C`, and demonstrates
+`Mathlib/CategoryTheory/Monad/Kleisli.lean defines the general version for a monad on `C`, and demonstrates
 the equivalence between the two.
 
 ## TODO

@@ -12,7 +12,7 @@ import Mathlib.Logic.Equiv.Basic
 /-!
 # Existence of limits and colimits
 
-In `CategoryTheory.Limits.IsLimit` we defined `IsLimit c`,
+In `Mathlib/CategoryTheory/Limits/IsLimit.lean we defined `IsLimit c`,
 the data showing that a cone `c` is a limit cone.
 
 The two main structures defined in this file are:
@@ -449,7 +449,7 @@ theorem hasLimit_of_equivalence_comp (e : K ≌ J) [HasLimit (e.functor ⋙ F)] 
   hasLimit_of_equivalence_comp
 
 -- `hasLimitCompEquivalence` and `hasLimitOfCompEquivalence`
--- are proved in `CategoryTheory/Adjunction/Limits.lean`.
+-- are proved in `Mathlib/CategoryTheory/Adjunction/Limits.lean.
 section LimFunctor
 
 variable [HasLimitsOfShape J C]

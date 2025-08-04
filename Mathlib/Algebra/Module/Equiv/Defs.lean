@@ -20,7 +20,7 @@ In this file we define
 
 To ensure that composition works smoothly for semilinear equivalences, we use the typeclasses
 `RingHomCompTriple`, `RingHomInvPair` and `RingHomSurjective` from
-`Algebra/Ring/CompTypeclasses`.
+`Mathlib/Algebra/Ring/CompTypeclasses.lean.
 
 The group structure on automorphisms, `LinearEquiv.automorphismGroup`, is provided elsewhere.
 

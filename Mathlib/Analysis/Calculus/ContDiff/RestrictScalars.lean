@@ -12,7 +12,7 @@ import Mathlib.Analysis.Calculus.FDeriv.RestrictScalars
 This file establishes standard theorems on restriction of scalars for iterated Fréchet derivatives,
 comparing iterated derivatives with respect to a field `𝕜'` to iterated derivatives with respect to
 a subfield `𝕜 ⊆ 𝕜'`. The results are analogous to those found in
-`Mathlib.Analysis.Calculus.FDeriv.RestrictScalars`.
+`Mathlib/Analysis/Calculus/FDeriv/RestrictScalars.lean.
 -/
 
 variable
