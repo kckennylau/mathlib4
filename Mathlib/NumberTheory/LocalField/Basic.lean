@@ -99,21 +99,35 @@ instance : IsDiscreteValuationRing 𝒪[K] :=
   haveI : CompactSpace (Valued.integer K) := inferInstanceAs (CompactSpace 𝒪[K])
   Valued.integer.isDiscreteValuationRing_of_compactSpace
 
+section MOVE
+
+/-- An isomorphism of ordered monoids descends to their units. -/
+@[simps!]
+def _root_.OrderMonoidIso.units {α β : Type*} [Preorder α] [Monoid α] [Preorder β] [Monoid β]
+    (e : α ≃*o β) : αˣ ≃*o βˣ where
+  __ := Units.mapEquiv e.toMulEquiv
+  map_le_map_iff' {x y} := by simp [← Units.val_le_val]
+
+/-- The top submononid is isomorphic to the whole type as ordered monoids. -/
+@[simps!]
+def _root_.OrderMonoidIso.top {α : Type*} [Preorder α] [Monoid α] : (⊤ : Submonoid α) ≃*o α where
+  __ := Submonoid.topEquiv
+  map_le_map_iff' := Iff.rfl
+
+end MOVE
+
 /-- The value group of a local field is (uniquely) isomorphic to `ℤᵐ⁰`. -/
 noncomputable
 def valueGroupWithZeroIsoInt : ValueGroupWithZero K ≃*o ℤᵐ⁰ := by
-  apply Nonempty.some
   letI := IsTopologicalAddGroup.toUniformSpace K
-  haveI := isUniformAddGroup_of_addCommGroup (G := K)
-  obtain ⟨_⟩ := Valued.integer.locallyFiniteOrder_units_mrange_of_isCompact_integer
-    (isCompact_iff_compactSpace.mpr (inferInstanceAs (CompactSpace 𝒪[K])))
-  let e : (MonoidHom.mrange (valuation K)) ≃*o ValueGroupWithZero K :=
-    ⟨.ofBijective (MonoidHom.mrange (valuation K)).subtype ⟨Subtype.val_injective, fun x ↦
-      ⟨⟨x, ValuativeRel.valuation_surjective x⟩, rfl⟩⟩, .rfl⟩
+  letI := isUniformAddGroup_of_addCommGroup (G := K)
+  have hf := (locallyFiniteOrder_units_mrange_of_isCompact_integer
+    (isCompact_iff_compactSpace.mpr (inferInstanceAs (CompactSpace 𝒪[K])))).some
+  rw [MonoidHom.mrange_eq_top_of_surjective _ (by exact valuation_surjective)] at hf
+  have e : (⊤ : Submonoid _)ˣ ≃*o (ValueGroupWithZero K)ˣ := OrderMonoidIso.top.units
+  have := e.symm.toOrderIso.locallyFiniteOrder
   have : Nontrivial (ValueGroupWithZero K)ˣ := isNontrivial_iff_nontrivial_units.mp inferInstance
-  have : Nontrivial (↥(MonoidHom.mrange (valuation K)))ˣ :=
-    (Units.map_injective (f := e.symm.toMonoidHom) e.symm.injective).nontrivial
-  exact ⟨e.symm.trans (LocallyFiniteOrder.orderMonoidWithZeroEquiv _)⟩
+  exact LocallyFiniteOrder.orderMonoidWithZeroEquiv _
 
 instance : ValuativeRel.IsDiscrete K :=
   (ValuativeRel.nonempty_orderIso_withZeroMul_int_iff.mp ⟨valueGroupWithZeroIsoInt K⟩).1
