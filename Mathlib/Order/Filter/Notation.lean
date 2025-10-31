@@ -86,7 +86,6 @@ variable {α : Type*} [Pow α ℕ] [Preorder α] [TopologicalSpace α] (x : α)
 #check y ⟶[y → x][≠] x
 #check y ⟶[y → x][<] x
 #check y ⟶[y → ∞][<] x
-
 #check PrettyPrinter.Unexpander
 #check iInf_delab
 end Filter
